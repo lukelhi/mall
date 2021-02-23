@@ -21,6 +21,7 @@
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
     <dependencies>
+        <!--依赖dao-->
         <dependency>
             <groupId>com.mall</groupId>
             <artifactId>mall-manager-dao</artifactId>
