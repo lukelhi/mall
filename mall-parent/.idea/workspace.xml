@@ -64,7 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614050021468</updated>
-      <workItem from="1614050025871" duration="1995000" />
+      <workItem from="1614050025871" duration="3124000" />
     </task>
     <servers />
   </component>
@@ -72,6 +72,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="397" y="143" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1614056674172">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="397" y="143" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1536.864@0.0.1536.864" timestamp="1614056674172" />
     <state x="548" y="210" key="FileChooserDialogImpl" timestamp="1614050609710">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
