@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mall-manager-dao" />
+        <module name="mall-manager-pojo" />
+        <module name="mall-manager-service" />
+        <module name="mall-manager-web" />
+        <module name="mall-common" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="taotao-manager" target="1.7" />
+      <module name="taotao-manager-dao" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
