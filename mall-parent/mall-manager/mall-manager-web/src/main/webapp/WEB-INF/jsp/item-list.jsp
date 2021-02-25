@@ -3,6 +3,8 @@
        data-options="singleSelect:false,collapsible:true,pagination:true,url:'/item/list',method:'get',pageSize:30,toolbar:toolbar">
     <thead>
         <tr>
+            <%--根据控件规定返回数据格式:total,rows--%>
+            <%--field对应每个元素的key--%>
         	<th data-options="field:'ck',checkbox:true"></th>
         	<th data-options="field:'id',width:60">商品ID</th>
             <th data-options="field:'title',width:200">商品标题</th>
@@ -17,10 +19,10 @@
         </tr>
     </thead>
 </table>
-<div id="itemEditWindow" class="easyui-window" title="编辑商品" data-options="modal:true,closed:true,iconCls:'icon-save',href:'/rest/page/item-edit'" style="width:80%;height:80%;padding:10px;">
+<div id="itemEditWindow" class="easyui-window" title="编辑商品"
+     data-options="modal:true,closed:true,iconCls:'icon-save',href:'/rest/page/item-edit'" style="width:80%;height:80%;padding:10px;">
 </div>
 <script>
-
     function getSelectionsIds(){
     	var itemList = $("#itemList");
     	var sels = itemList.datagrid("getSelections");
@@ -31,7 +33,6 @@
     	ids = ids.join(",");
     	return ids;
     }
-    
     var toolbar = [{
         text:'新增',
         iconCls:'icon-add',
@@ -51,7 +52,6 @@
         		$.messager.alert('提示','只能选择一个商品!');
         		return ;
         	}
-        	
         	$("#itemEditWindow").window({
         		onLoad :function(){
         			//回显数据

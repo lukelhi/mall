@@ -3,7 +3,8 @@
 <table cellpadding="5" style="margin-left: 30px" id="itemParamAddTable" class="itemParam">
 	<tr>
 		<td>商品类目:</td>
-		<td><a href="javascript:void(0)" class="easyui-linkbutton selectItemCat">选择类目</a> 
+		<td><a href="javascript:void(0)" class="easyui-linkbutton selectItemCat">选择类目</a>
+			<%--selectItemCat在common.js中，具有选择商品类目功能--%>
 			<input type="hidden" name="cid" style="width: 280px;"></input>
 		</td>
 	</tr>
@@ -35,12 +36,13 @@
 		</ul>
 	</li>
 </div>
-<script style="text/javascript">
+<script style="text:javascript">
 	$(function(){
 		TAOTAO.initItemCat({
+			/*node:回调参数，选择的结点对象 */
 			fun:function(node){
 			$(".addGroupTr").hide().find(".param").remove();
-				//  判断选择的目录是否已经添加过规格
+				//  调用getJSON，接收json，判断选择的目录是否已经添加过规格
 			  $.getJSON("/item/param/query/itemcatid/" + node.id,function(data){
 				  if(data.status == 200 && data.data){
 					  $.messager.alert("提示", "该类目已经添加，请选择其他类目。", undefined, function(){
@@ -52,7 +54,7 @@
 			  });
 			}
 		});
-		
+		/* 分组显示 */
 		$(".addGroup").click(function(){
 			  var temple = $(".itemParamAddTemplate li").eq(0).clone();
 			  $(this).parent().parent().append(temple);
@@ -75,6 +77,7 @@
 		$("#itemParamAddTable .submit").click(function(){
 			var params = [];
 			var groups = $("#itemParamAddTable [name=group]");
+			/*jquery each方法中i:index，e:当前迭代js对象*/
 			groups.each(function(i,e){
 				var p = $(e).parentsUntil("ul").parent().find("[name=param]");
 				var _ps = [];
@@ -92,6 +95,7 @@
 					});					
 				}
 			});
+			/*	提交规格参数模板，提交cid和paramData参数	*/
 			var url = "/item/param/save/"+$("#itemParamAddTable [name=cid]").val();
 			$.post(url,{"paramData":JSON.stringify(params)},function(data){
 				if(data.status == 200){

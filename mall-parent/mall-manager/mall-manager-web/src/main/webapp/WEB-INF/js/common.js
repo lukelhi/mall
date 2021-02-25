@@ -22,7 +22,7 @@ Date.prototype.format = function(format){
 var TT = TAOTAO = {
 	// 编辑器参数
 	kingEditorParams : {
-		//指定上传文件参数名称
+		//controller 指定上传文件参数名称
 		filePostName  : "uploadFile",
 		//指定上传文件请求的url。
 		uploadJson : '/pic/upload',
@@ -80,10 +80,8 @@ var TT = TAOTAO = {
         			}
         		}
         	}
-        	//给“上传图片按钮”绑定click事件
         	$(e).click(function(){
         		var form = $(this).parentsUntil("form").parent("form");
-        		//打开图片上传窗口
         		KindEditor.editor(TT.kingEditorParams).loadPlugin('multiimage',function(){
         			var editor = this;
         			editor.plugin.multiImageDialog({
@@ -104,6 +102,9 @@ var TT = TAOTAO = {
     
     // 初始化选择类目组件
     initItemCat : function(data){
+
+		/*each,一个页面的每个selectItemCat 都可以使用该功能。easyui中只有一个html，其他的jsp中都是片段 */
+
     	$(".selectItemCat").each(function(i,e){
     		var _ele = $(e);
     		if(data && data.cid){
@@ -111,26 +112,28 @@ var TT = TAOTAO = {
     		}else{
     			_ele.after("<span style='margin-left:10px;'></span>");
     		}
-    		_ele.unbind('click').click(function(){
+    		_ele.unbind('click').click(function(){	/*綁定事件，出现窗口*/
     			$("<div>").css({padding:"5px"}).html("<ul>")
     			.window({
     				width:'500',
     			    height:"450",
-    			    modal:true,
+    			    modal:true,/*模态窗口*/
     			    closed:true,
     			    iconCls:'icon-save',
     			    title:'选择类目',
     			    onOpen : function(){
     			    	var _win = this;
-    			    	$("ul",_win).tree({
+    			    	$("ul",_win).tree({	/*easyui的异步tree,根据js的对象初始化*/
     			    		url:'/item/cat/list',
     			    		animate:true,
     			    		onClick : function(node){
+    			    			/*点击控件，调用结点，如果是叶子节点，将内容取出*/
     			    			if($(this).tree("isLeaf",node.target)){
     			    				// 填写到cid中
     			    				_ele.parent().find("[name=cid]").val(node.id);
     			    				_ele.next().text(node.text).attr("cid",node.id);
-    			    				$(_win).window('close');
+    			    				$(_win).window('close');/*关闭窗口*/
+									/*当前结点不为空，有fun方法，就会回调*/
     			    				if(data && data.fun){
     			    					data.fun.call(this,node);
     			    				}
@@ -145,7 +148,6 @@ var TT = TAOTAO = {
     		});
     	});
     },
-    
     createEditor : function(select){
     	return KindEditor.create(select, TT.kingEditorParams);
     },
@@ -188,13 +190,14 @@ var TT = TAOTAO = {
     closeCurrentWindow : function(){
     	$(".panel-tool-close").click();
     },
-    
+    /*	展示规格参数的表单 */
     changeItemParam : function(node,formId){
-    	$.getJSON("/item/param/query/itemcatid/" + node.id,function(data){
+    	$.getJSON("/item/param/query/itemcatid/" + node.id,function(data){/*查询是否有规格参数，有规格参数即显示*/
 			  if(data.status == 200 && data.data){
 				 $("#"+formId+" .params").show();
 				 var paramData = JSON.parse(data.data.paramData);
 				 var html = "<ul>";
+
 				 for(var i in paramData){
 					 var pd = paramData[i];
 					 html+="<li><table>";

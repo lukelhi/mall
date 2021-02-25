@@ -87,7 +87,7 @@
 		//同步文本框中的商品描述
 		itemAddEditor.sync();
 		
-		//取商品的规格
+		//取商品的规格参数
 		var paramJson = [];
 		$("#itemAddForm .params li").each(function(i,e){
 			var trs = $(e).find("tr");
@@ -105,13 +105,13 @@
 				"params": ps
 			});
 		});
-		//把json对象转换成字符串
+		//把json对象转换成字符串，提交
 		paramJson = JSON.stringify(paramJson);
 		$("#itemAddForm [name=itemParams]").val(paramJson);
 		
 		//ajax的post方式提交表单
-		//$("#itemAddForm").serialize()将表单序列号为key-value形式的字符串
-		alert($("#itemAddForm").serialize());
+		//$("#itemAddForm").serialize()将表单序列化为key-value形式的字符串
+		//alert($("#itemAddForm").serialize());
 		$.post("/item/save",$("#itemAddForm").serialize(), function(data){
 			if(data.status == 200){
 				$.messager.alert('提示','新增商品成功!');
