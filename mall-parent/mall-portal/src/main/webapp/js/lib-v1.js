@@ -1168,13 +1168,9 @@ $.extend(jdModelCallCenter, {autoLocation: function(a) {
         })
     }
 };
-//http://d.360buy.com/configs/get?type=JSON
 var category = {OBJ: $("#_JD_ALLSORT"),
-		//URL_Serv: "http://rest.taotao.com/rest/item/cat/list?callback=category.getDataService",
-		//http://localhost:8081/category.json
 		//指定好回调方法
 		URL_Serv: "http://localhost:8081/rest/item/cat/list?callback=category.getDataService",
-		//URL_BrandsServ: "http://d.360buy.com/brandVclist2/get?callback=category.getBrandService&ids=a,9211,9212^b,9214,9215^c,9217,9218^d,9220,9221^e,9223,9224^f,9226,9227^g,9229,9230^h,9232,9233^m,9235,9236^i,9238,9239^j,9241,9242^p,9244,9245^k,9247,9248^l,9250,9251",
 		FN_GetLink: function(a, b) {
 	        var c, d;
 	        switch (a) {
@@ -1198,7 +1194,7 @@ var category = {OBJ: $("#_JD_ALLSORT"),
                 b = '<div class="categorys-links" id="categorys-links-jzc" ' + e + '><a href="http://channel.jd.com/jiazhuang.html" target="_blank">\u5bb6\u88c5\u57ce</a></div>'
         }
         return b
-    },DATA_Simple: {1: [{l: "http://book.jd.com/",n: "\u56fe\u4e66"}, {l: "http://mvd.jd.com/",n: "\u97f3\u50cf"}, {l: "http://e.jd.com/",n: "\u6570\u5b57\u5546\u54c1"}],2: [{l: "http://channel.jd.com/electronic.html",n: "\u5bb6\u7528\u7535\u5668"}],3: [{l: "http://shouji.jd.com/",n: "\u624b\u673a"}, {l: "http://channel.jd.com/digital.html",n: "\u6570\u7801"}, {l: "http://mobile.jd.com/index.do",n: "\u4eac\u4e1c\u901a\u4fe1"}],4: [{l: "http://channel.jd.com/computer.html",n: "\u7535\u8111\u3001\u529e\u516c"}],5: [{l: "http://channel.jd.com/home.html",n: "\u5bb6\u5c45"}, {l: "http://channel.jd.com/furniture.html",n: "\u5bb6\u5177"}, {l: "http://channel.jd.com/decoration.html",n: "\u5bb6\u88c5"}, {l: "http://channel.jd.com/kitchenware.html",n: "\u53a8\u5177"}],6: [{l: "http://channel.jd.com/1315-1342.html",n: "\u7537\u88c5"}, {l: "http://channel.jd.com/1315-1343.html",n: "\u5973\u88c5"}, {l: "http://channel.jd.com/1315-1345.html",n: "\u5185\u8863"}, {l: "http://channel.jd.com/jewellery.html",n: "\u73e0\u5b9d"}],7: [{l: "http://channel.jd.com/beauty.html",n: "\u4e2a\u62a4\u5316\u5986"}],8: [{l: "http://channel.jd.com/shoes.html",n: "\u978b\u9774"}, {l: "http://channel.jd.com/bag.html",n: "\u7bb1\u5305"}, {l: "http://channel.jd.com/watch.html",n: "\u949f\u8868"}, {l: "http://channel.jd.com/1672-2615.html",n: "\u5962\u4f88\u54c1"}],9: [{l: "http://channel.jd.com/sports.html",n: "\u8fd0\u52a8\u6237\u5916"}],10: [{l: "http://channel.jd.com/auto.html",n: "\u6c7d\u8f66\u7528\u54c1"}],11: [{l: "http://channel.jd.com/baby.html",n: "\u6bcd\u5a74"}, {l: "http://channel.jd.com/toys.html",n: "\u73a9\u5177\u4e50\u5668"}],12: [{l: "http://channel.jd.com/food.html",n: "\u98df\u54c1\u996e\u6599"}, {l: "http://channel.jd.com/wine.html",n: "\u9152\u7c7b"}, {l: "http://channel.jd.com/freshfood.html",n: "\u751f\u9c9c"}],13: [{l: "http://channel.jd.com/health.html",n: "\u8425\u517b\u4fdd\u5065"}],14: [{l: "http://caipiao.jd.com/",n: "\u5f69\u7968"}, {l: "http://trip.jd.com/",n: "\u65c5\u884c"}, {l: "http://chongzhi.jd.com/",n: "\u5145\u503c"}, {l: "http://piao.jd.com/",n: "\u7968\u52a1"}]},TPL_Simple: '{for item in data}<div class="item fore${parseInt(item_index)}">    <span data-split="1" {if pageConfig.isHome} clstag="homepage|keycount|home2013|06{if parseInt(item_index)+1>9}${parseInt(item_index)+1}{else}0${parseInt(item_index)+1}{/if}a"{/if}>        <h3>{for sItem in item}{if sItem_index!=0}\u3001{/if}<a href="${sItem.l}">${sItem.n}</a>{/for}</h3>        <s></s>    </span></div>{/for}<div class="extra"><a href="http://www.jd.com/allSort.aspx">\u5168\u90e8\u5546\u54c1\u5206\u7c7b</a></div>',FN_InitSimple: function() {
+    },DATA_Simple: {1: [{l: "",n: "\u56fe\u4e66"}, {l: "",n: "\u97f3\u50cf"}, {l: "",n: "\u6570\u5b57\u5546\u54c1"}],2: [{l: "http://channel.jd.com/electronic.html",n: "\u5bb6\u7528\u7535\u5668"}],3: [{l: "http://shouji.jd.com/",n: "\u624b\u673a"}, {l: "http://channel.jd.com/digital.html",n: "\u6570\u7801"}, {l: "http://mobile.jd.com/index.do",n: "\u4eac\u4e1c\u901a\u4fe1"}],4: [{l: "http://channel.jd.com/computer.html",n: "\u7535\u8111\u3001\u529e\u516c"}],5: [{l: "http://channel.jd.com/home.html",n: "\u5bb6\u5c45"}, {l: "http://channel.jd.com/furniture.html",n: "\u5bb6\u5177"}, {l: "http://channel.jd.com/decoration.html",n: "\u5bb6\u88c5"}, {l: "http://channel.jd.com/kitchenware.html",n: "\u53a8\u5177"}],6: [{l: "http://channel.jd.com/1315-1342.html",n: "\u7537\u88c5"}, {l: "http://channel.jd.com/1315-1343.html",n: "\u5973\u88c5"}, {l: "http://channel.jd.com/1315-1345.html",n: "\u5185\u8863"}, {l: "http://channel.jd.com/jewellery.html",n: "\u73e0\u5b9d"}],7: [{l: "http://channel.jd.com/beauty.html",n: "\u4e2a\u62a4\u5316\u5986"}],8: [{l: "http://channel.jd.com/shoes.html",n: "\u978b\u9774"}, {l: "http://channel.jd.com/bag.html",n: "\u7bb1\u5305"}, {l: "http://channel.jd.com/watch.html",n: "\u949f\u8868"}, {l: "http://channel.jd.com/1672-2615.html",n: "\u5962\u4f88\u54c1"}],9: [{l: "http://channel.jd.com/sports.html",n: "\u8fd0\u52a8\u6237\u5916"}],10: [{l: "http://channel.jd.com/auto.html",n: "\u6c7d\u8f66\u7528\u54c1"}],11: [{l: "http://channel.jd.com/baby.html",n: "\u6bcd\u5a74"}, {l: "http://channel.jd.com/toys.html",n: "\u73a9\u5177\u4e50\u5668"}],12: [{l: "http://channel.jd.com/food.html",n: "\u98df\u54c1\u996e\u6599"}, {l: "http://channel.jd.com/wine.html",n: "\u9152\u7c7b"}, {l: "http://channel.jd.com/freshfood.html",n: "\u751f\u9c9c"}],13: [{l: "http://channel.jd.com/health.html",n: "\u8425\u517b\u4fdd\u5065"}],14: [{l: "http://caipiao.jd.com/",n: "\u5f69\u7968"}, {l: "http://trip.jd.com/",n: "\u65c5\u884c"}, {l: "http://chongzhi.jd.com/",n: "\u5145\u503c"}, {l: "http://piao.jd.com/",n: "\u7968\u52a1"}]},TPL_Simple: '{for item in data}<div class="item fore${parseInt(item_index)}">    <span data-split="1" {if pageConfig.isHome} clstag="homepage|keycount|home2013|06{if parseInt(item_index)+1>9}${parseInt(item_index)+1}{else}0${parseInt(item_index)+1}{/if}a"{/if}>        <h3>{for sItem in item}{if sItem_index!=0}\u3001{/if}<a href="${sItem.l}">${sItem.n}</a>{/for}</h3>        <s></s>    </span></div>{/for}<div class="extra"><a href="http://www.jd.com/allSort.aspx">\u5168\u90e8\u5546\u54c1\u5206\u7c7b</a></div>',FN_InitSimple: function() {
     },FN_GetData: function() {
     	//使用jsonp来实现跨域请求
         $.getJSONP(this.URL_Serv);
@@ -1354,22 +1350,7 @@ var category = {OBJ: $("#_JD_ALLSORT"),
     }), $("#site-nav").Jdropdown({delay: 50}, function() {
         $.ajax({url: "http://www.jd.com/hotwords.aspx?position=new-index-003",dataType: "script",scriptCharset: "gb2312",cache: !0})
     })), document.getElementById("navitems") ? $("#navitems li").Jdropdown() : $("#navitems-2013 li").Jdropdown()
-    		
-//    		$.ajax({url: ("https:" == document.location.protocol ? "https://" : "http://") + "passport." + pageConfig.FN_getDomain() + "/new/helloService.ashx?m=ls",
-//    			dataType: "jsonp",scriptCharset: "gb2312",success: function(a) {
-//            a && a.info && $("#loginbar").html(a.info), a && a.sso && $.each(a.sso, function() {
-//                $.getJSON(this);
-//                
-//            })
-//        }}), 
-        
-//        document.getElementById("settleup") ? (null != MCART.DATA_Amount && ($("#settleup s").eq(0).addClass("shopping"), $("#shopping-amount").html(MCART.DATA_Amount)), $("#settleup dl").Jdropdown({delay: 200}, function() {
-//        //MCART.FN_Refresh(), $("#settleup-url").attr("href", "http://cart.jd.com/cart/cart.html?r=" + +new Date)
-//    }
-//        
-//        )) : (null != MCART.DATA_Amount && $("#shopping-amount").html(MCART.DATA_Amount), $("#settleup-2013 dl").Jdropdown({delay: 200}, function() {
-//        MCART.FN_Refresh(), $("#settleup-url").attr("href", "http://cart.jd.com/cart/cart.html?r=" + +new Date)
-//    }));
+
     var a = document.getElementById("my360buy") ? $("#my360buy") : $("#my360buy-2013");
     a.find("dl").Jdropdown({delay: 100}, function(a) {
         a.attr("load") || $.login({automatic: !1,complete: function(b) {
@@ -1398,168 +1379,7 @@ var category = {OBJ: $("#_JD_ALLSORT"),
     }
 }();
 var $o = function() {
-//    function a() {
-//        this.length = 0, this.index = -1, this.iLastModified = 0, this.lastKeyword = !1
-//    }
-//    var b = {};
-//    b.replace = function(a, b) {
-//        return a.replace(/#{(.*?)}/g, function() {
-//            var a = arguments[1];
-//            return "undefined" != typeof b[a] ? b[a] : arguments[0]
-//        })
-//    }, String.prototype.isEmpty = function() {
-//        return 0 == this.length
-//    };
-//    var c = '<a style="color:#005AA0" onclick="$o.del(event)">\u5220\u9664</a>', d = "\u641c\u7d22\u5386\u53f2", e = '<li id="d_#{id}" suggest-pos="#{suggest_pos}" title="#{title}" onclick="$o.clickItem(this)" history="1"><div class="search-item" style="color:#005AA0">#{keyword}</div><div class="search-count">' + d + "</div></li>", f = '<li id="d_#{id}" suggest-pos="#{suggest_pos}" title="#{title}" onclick="$o.clickItem(this)"><div class="search-item">#{keyword}</div><div class="search-count">\u7ea6#{amount}\u4e2a\u5546\u54c1</div></li>', g = '<div id="d_#{id}" suggest-pos="#{suggest_pos}" class="#{className}" title="#{title}" cid="#{cid}" cLevel="#{cLevel}" onclick="$o.clickItem(this)"><div class="search-item">\u5728<strong>#{cname}</strong>\u5206\u7c7b\u4e2d\u641c\u7d22</div><div class="search-count">\u7ea6#{amount}\u4e2a\u5546\u54c1</div></div>#{categorys}', h = '<li class="fore1"><div id="d_#{id}" suggest-pos="#{suggest_pos}" class="fore1" title="#{title}" onclick="$o.clickItem(this)"><div class="search-item">#{keyword}</div><div class="search-count" #{style}>\u7ea6#{amount}\u4e2a\u5546\u54c1</div></div>#{categorys}</li>', i = "http://dd.search.jd.com/?key=#{keyword}", j = "#FFDFC6", k = "#FFF", l = $("#key"), m = $("#shelper");
-//    a.prototype.init = function() {
-//        this.length = 0, this.index = -1, this.click = !1
-//    }, a.prototype.hideTip = function() {
-//        this.init(), this.lastKeyword = !1, m.html("").hide()
-//    }, a.prototype.clickItem = function(a) {
-//        var b = a.getAttribute("cid");
-//        search.cid = null != b && "" != b ? b : null;
-//        var c = a.getAttribute("cLevel");
-//        search.cLevel = null != c && "" != c ? c : null;
-//        var d = a.getAttribute("ev_val");
-//        search.ev_val = null == d || $.trim(d).isEmpty() ? null : d;
-//        var e = a.getAttribute("title");
-//        null == e || $.trim(e).isEmpty() || l.val(e), search.additinal = "&suggest=" + a.getAttribute("suggest-pos"), this.click = a.id.substr(2) - m.find("li[history='1']").length, search("key")
-//    }, a.prototype.mouseenter = function(a) {
-//        var a = $(a);
-//        a.attr("history") && a.find(".search-count").html(c), a.css("background", j);
-//        var b = a.attr("id").split("_"), e = parseInt(b[1], 10);
-//        if (e != this.index) {
-//            if (this.index > -1) {
-//                var f = $("#d_" + this.index);
-//                f.css("background", k), f.attr("history") && f.find(".search-count").html(d)
-//            }
-//            this.index = e
-//        }
-//    }, a.prototype.mouseleave = function(a) {
-//        a.css("background", k), a.attr("history") && a.find(".search-count").html(d)
-//    }, a.prototype.selectItemNode = function(a) {
-//        var b = this, e = $("#d_" + b.index + ":visible");
-//        e.css("background-color", k), e.attr("history") && e.find(".search-count").html(d), -1 == b.index && -1 == a && (a = 0), b.index = (b.length + b.index + a) % b.length;
-//        var f = $("#d_" + b.index);
-//        if (f.length > 0) {
-//            f.attr("history") && f.find(".search-count").html(c), f.css("background-color", j);
-//            var g = f.attr("title");
-//            null == g || $.trim(g).isEmpty() || l.val(g);
-//            var h = f.attr("cid");
-//            search.cid = null != h && "" != h ? h : null;
-//            var i = f.attr("cLevel");
-//            search.cLevel = null != i && "" != i ? i : null, search.ev_val = null, search.additinal = "&suggest=" + f.attr("suggest-pos"), b.click = b.index - m.find("li[history='1']").length
-//        }
-//    }, a.prototype.input = function() {
-//        var a = this;
-//        a.timeoutId && clearTimeout(a.timeoutId), a.timeoutId = setTimeout(function() {
-//            var c = $.trim(l.val());
-//            if (c === a.lastKeyword || !(c || readCookie("pin") || readCookie("_tp")))
-//                return !1;
-//            a.lastKeyword = c;
-//            var d = b.replace(i, {keyword: encodeURIComponent(c)});
-//            $.ajax({url: d,dataType: "jsonp",scriptCharset: "utf-8",jsonp: "callback",success: function(b) {
-//                    return function(c) {
-//                        a.iLastModified > b || (a.iLastModified = b, a.onloadItems(c))
-//                    }
-//                }((new Date).getTime())})
-//        }, 150)
-//    }, a.prototype.keydown_up = function(a) {
-//        var b = this, c = a || window.event;
-//        0 == l.length && (l = $("#key")), 0 == m.length && (m = $("tie"));
-//        var d = c.keyCode;
-//        switch (d) {
-//            case 38:
-//                b.selectItemNode(-1);
-//                break;
-//            case 40:
-//                b.selectItemNode(1);
-//                break;
-//            case 27:
-//                b.hideTip();
-//                break;
-//            case 37:
-//                break;
-//            case 39:
-//                break;
-//            default:
-//                $.browser.mozilla || b.input()
-//        }
-//    }, a.prototype.onloadItems = function(a) {
-//        if (0 == a.length)
-//            return this.hideTip(), void 0;
-//        var c = this;
-//        c.init();
-//        var d = "", i = 0;
-//        window.pageConfig && window.pageConfig.searchType && (i = window.pageConfig.searchType);
-//        for (var j = 0, k = "", n = !1, o = 0, p = $.trim(l.val()), q = 0, r = a.length; r > q; q++) {
-//            var s = a[q];
-//            if (s) {
-//                var t = $.trim(s.keyword), u = t.toLowerCase().indexOf(p.toLowerCase()), v = t;
-//                if (0 == u && (v = p + "<strong>" + t.substring(u + p.length) + "</strong>"), "string" != typeof s.cid || $.trim(s.cid).isEmpty()) {
-//                    var w = "";
-//                    k += 0 == s.amount ? b.replace(e, {id: o,title: s.keyword,keyword: v,amount: s.amount,suggest_pos: j}) : b.replace(f, {id: o,title: s.keyword,keyword: v,amount: s.amount,suggest_pos: j,style: w}), o++, j++
-//                } else {
-//                    if (0 == n) {
-//                        n = !0;
-//                        var w = 'style="visibility:hidden"', x = 0;
-//                        s.oamount && s.oamount > 0 && (x = s.oamount, w = ""), k += b.replace(h, {id: o,title: s.keyword,keyword: v,amount: x,suggest_pos: j,style: w}), o++, j++
-//                    }
-//                    if ("string" == typeof s.cname && $.trim(s.cname).isEmpty())
-//                        continue;
-//                    var y = s.level;
-//                    if (!y)
-//                        continue;
-//                    if (0 == i) {
-//                        if ("string" == typeof y && /^[1-8]4$/.test(y))
-//                            continue
-//                    } else if (5 == i) {
-//                        if ("string" == typeof y && !/^[5-8]2$/.test(y))
-//                            continue
-//                    } else if (1 == i || 2 == i || 3 == i || 4 == i)
-//                        continue;
-//                    var z = "item1", A = b.replace(g, {id: o,title: s.keyword,cid: s.cid,cLevel: s.level,className: z,cname: s.cname,amount: s.amount,suggest_pos: j - 1});
-//                    k = b.replace(k, {categorys: A}), o++
-//                }
-//            }
-//        }
-//        c.length = o, d = b.replace(k, {categorys: ""}), "" != d ? (d += '<li class="close" onclick="$o.hideTip()">\u5173\u95ed</li>', m.html(d).show(), m.find('[id^="d_"]').bind("mouseleave", function() {
-//            c.mouseleave($(this))
-//        }).bind("mouseenter", function() {
-//            c.mouseenter($(this))
-//        })) : m.html("").hide()
-//    }, a.prototype.bind_input = function() {
-//        $.browser.mozilla ? (l.bind("keydown", function(a) {
-//            n.keydown_up(a)
-//        }), l.bind("input", function(a) {
-//            n.input(a)
-//        })) : l.bind("keyup", function(a) {
-//            n.keydown_up(a)
-//        }), l.focus(function() {
-//            setTimeout(function() {
-//                n.input()
-//            }, 10)
-//        }), m.parent().bind("mouseenter", function() {
-//            n.e_position = !0, n.timeoutId && clearTimeout(n.timeoutId)
-//        }).bind("mouseleave", function() {
-//            n.e_position = !1, n.timeoutId = setTimeout(function() {
-//                n.hideTip()
-//            }, 500)
-//        }), $(document).click(function() {
-//            n.e_position || n.hideTip()
-//        })
-//    }, a.prototype.del = function(a) {
-//        var b = this;
-//        a = a ? a : window.event, window.event ? (a.cancelBubble = !0, a.returnValue = !1) : (a.stopPropagation(), a.preventDefault());
-//        var c = $(a.srcElement ? a.srcElement : a.target), d = c.parent().parent().attr("title");
-//        $.ajax({url: "http://search.jd.com/suggest.php?op=del&callback=?&key=" + encodeURIComponent(d),dataType: "jsonp",scriptCharset: "utf-8",beforeSend: function() {
-//                c.parent().parent().hide()
-//            },success: function() {
-//                b.lastKeyword = !1, l.focus()
-//            }})
-//    };
-//    var n = new a;
-//    return n.bind_input(), n
+
 }();
 pageConfig.FN_InitSidebar = function() {
     $("#toppanel").length || $(document.body).prepend('<div class="w ld" id="toppanel"></div>'), $("#toppanel").append('<div id="sidepanel" class="hide"></div>');
