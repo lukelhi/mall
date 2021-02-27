@@ -1,7 +1,7 @@
 package com.mall.rest.controller;
 
 import com.mall.pojo.Content;
-import com.mall.pojo.ExceptionUtil;
+import com.mall.utils.ExceptionUtil;
 import com.mall.pojo.MallResult;
 import com.mall.rest.service.ContentService;
 import org.springframework.beans.factory.annotation.Autowired;

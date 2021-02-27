@@ -19,7 +19,7 @@ public class IndexController {
 	
 	//web.xml中有index.html欢迎页面,直接被被springmvc拦截，走这个方法
 	@RequestMapping("/index")
-	public String showIndex(Model model) {
+	public String showIndex(Model model) throws Exception {
 		//获取大广告位的内容
 		String json = contentService.getAdList();
 		//传递给页面

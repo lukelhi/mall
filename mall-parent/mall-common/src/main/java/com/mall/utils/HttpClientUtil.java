@@ -1,4 +1,4 @@
-package com.mall.pojo;
+package com.mall.utils;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;

@@ -1,7 +1,7 @@
 package com.mall.controller;
 
 import com.mall.pojo.Content;
-import com.mall.pojo.HttpClientUtil;
+import com.mall.utils.HttpClientUtil;
 import com.mall.pojo.MallResult;
 import com.mall.service.ContentService;
 import org.springframework.beans.factory.annotation.Autowired;

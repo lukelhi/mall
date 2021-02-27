@@ -1,4 +1,4 @@
-package com.mall.pojo;
+package com.mall.utils;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
