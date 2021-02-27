@@ -53,7 +53,7 @@
     <url-pattern>*.html</url-pattern>
   </servlet-mapping>
 
-  <!-- 请求后缀为html，会导致406 -->
+  <!-- 由于请求的url的后缀为.html导致406问题 -->
   <servlet-mapping>
     <servlet-name>mall-portal</servlet-name>
     <url-pattern>*.action</url-pattern>
