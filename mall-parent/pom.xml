@@ -15,6 +15,7 @@
         <module>mall-portal</module>
         <module>mall-search</module>
         <module>mall-sso</module>
+        <module>mall-order</module>
     </modules>
     <!-- 集中定义依赖版本号 -->
     <properties>

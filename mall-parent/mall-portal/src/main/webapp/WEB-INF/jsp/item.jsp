@@ -55,7 +55,7 @@
 <script type="text/javascript">pageConfig.product.marketPrice='';</script>
 <ul id="summary">
 	<li id="summary-price">
-		<div class="dt">淘&nbsp;淘&nbsp;价：</div>
+		<div class="dt">商&nbsp;城&nbsp;价：</div>
 		<div class="dd">
 			<strong class="p-price"  id="jd-price">￥<fmt:formatNumber groupingUsed="false" maxFractionDigits="2" minFractionDigits="2" value="${item.price / 100 }"/> </strong>
 			<a id="notice-downp" href="#none" target="_blank" clstag="shangpin|keycount|product|jiangjia">(降价通知)</a>
@@ -173,20 +173,7 @@
 			</div>
 			<div id="short-share">
 				<div id="view-bigimg" class="fl"><b></b><a href="http://www.jd.com/bigimage.aspx?id=1221882" target="_blank">查看大图</a></div>
-				<div id="share-list" class="share-list" clstag="shangpin|keycount|product|share">
-	<div class="share-bd">
-		<em class="share-hd">分享到：</em>
-		<ul class="share-list-item clearfix">
-			<li><a href="javascript:;" id="site-sina" title="分享到新浪微博">新浪微博</a></li>
-			<li><a href="javascript:;" id="site-qq" title="分享到给QQ好友">QQ</a></li>
-			<li><a href="javascript:;" id="site-qzone" title="分享到腾讯微博">腾讯微博</a></li>
-			<li><a href="javascript:;" id="site-renren" title="分享到人人网">人人网</a></li>
-			<li><a href="javascript:;" id="site-kaixing" title="分享到开心网">开心网</a></li>
-			<li><a href="javascript:;" id="site-douban" title="分享到豆瓣">豆瓣</a></li>
-			<li><a href="javascript:;" id="site-msn" title="分享给MSN好友">MSN</a></li>
-			<li><a href="javascript:;" id="site-email" title="邮件分享给好友">邮件</a></li>
-		</ul>
-	</div>
+
 	<div class="share-ft"><b></b></div>
 </div>
 <div class="clb"></div>				

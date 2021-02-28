@@ -13,7 +13,7 @@
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
    <link rel="stylesheet" href="/css/base.css">
    <link href="/css/purchase.2012.css?v=201410141639" rel="stylesheet" type="text/css">
-   <title>我的购物车 - 商城商城</title>
+   <title>我的购物车 - mall商城</title>
    <script>
    	var pageConfig  = {};
    </script>
@@ -127,7 +127,6 @@
                           <a href="" class="combine-btn">不支持合并付款</a>
                       </span>
                       <span class="fore2 hide" style="display: inline;">
-                          <a href="javascript:goToOverseaOrder();" class="checkout-jdInt">去商城国际结算<b></b></a>
                           <a href="javascript:goToOrder();" class="checkout-jd">去商城结算<b></b></a>
                       </span>
                   </span>

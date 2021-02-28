@@ -1,4 +1,4 @@
-package com.mall.portal.pojo;
+package com.mall.order.pojo;
 
 import com.mall.pojo.Order;
 import com.mall.pojo.OrderItem;
@@ -6,12 +6,13 @@ import com.mall.pojo.OrderShipping;
 
 import java.util.List;
 
-//接收参数的pojo
+
+//接受参数的pojo
 public class OrderInfo extends Order {
 
 	private List<OrderItem> orderItems;
 	private OrderShipping orderShipping;
-
+	
 	public List<OrderItem> getOrderItems() {
 		return orderItems;
 	}
@@ -24,6 +25,4 @@ public class OrderInfo extends Order {
 	public void setOrderShipping(OrderShipping orderShipping) {
 		this.orderShipping = orderShipping;
 	}
-
-
 }
