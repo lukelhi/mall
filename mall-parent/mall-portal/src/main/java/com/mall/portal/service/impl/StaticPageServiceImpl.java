@@ -45,6 +45,7 @@ public class StaticPageServiceImpl implements StaticPageService {
 		//生成静态页面
 		Configuration configuration = freeMarkerConfigurer.getConfiguration();
 		Template template = configuration.getTemplate("item.ftl");
+
 		//创建一个数据集
 		Map root = new HashMap<>();
 		//向数据集中添加属性

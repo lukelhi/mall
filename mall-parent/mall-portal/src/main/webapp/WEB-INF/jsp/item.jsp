@@ -17,7 +17,7 @@
 				skuid: 1221882,
 				name: '\u957f\u8679\uff08\u0043\u0048\u0041\u004e\u0047\u0048\u004f\u004e\u0047\uff09\u004c\u0045\u0044\u0034\u0032\u0035\u0033\u0038\u0045\u0053\u0020\u0034\u0032\u82f1\u5bf8\u0020\u7a84\u8fb9\u84dd\u5149\u004c\u0045\u0044\u6db2\u6676\u7535\u89c6\uff08\u9ed1\u8272\uff09',
 				skuidkey:'E804B1D153D29E36088A33A134D85EEA',
-				href: 'http://item.jd.com/1221882.html',
+				href: '',
 				src: 'jfs/t304/157/750353441/93159/e4ee9876/54227256N20d4f5ec.jpg',
 				cat: [737,794,798],
 				brand: 20710,
@@ -41,7 +41,8 @@
 <!-- header end -->
 <div class="w">
 	<div class="breadcrumb">
-		<strong><a href="http://channel.jd.com/electronic.html">家用电器</a></strong><span>&nbsp;&gt;&nbsp;<a href="http://channel.jd.com/737-794.html" >大 家 电</a>&nbsp;&gt;&nbsp;<a href="http://list.jd.com/737-794-798.html" >平板电视</a>&nbsp;&gt;&nbsp;</span><script type="text/javascript">pageConfig.product.cat=[737,794,798];</script><span><a href="http://www.jd.com/pinpai/798-20710.html" >长虹（CHANGHONG）</a>&nbsp;&gt;&nbsp;<a href="http://item.jd.com/1221882.html" >长虹LED42538ES</a></span>
+		<%--<strong><a href="">家用电器</a></strong>
+		<span>&nbsp;&gt;&nbsp;<a href="" >大 家 电</a>&nbsp;&gt;&nbsp;<a href="" >平板电视</a>&nbsp;&gt;&nbsp;</span><script type="text/javascript">pageConfig.product.cat=[737,794,798];</script><span><a href="" >长虹（CHANGHONG）</a>&nbsp;&gt;&nbsp;<a href="" >长虹LED42538ES</a></span>--%>
 	</div>
 </div><!--breadcrumb end-->
 <div class="w">
@@ -172,7 +173,7 @@
 				</div>
 			</div>
 			<div id="short-share">
-				<div id="view-bigimg" class="fl"><b></b><a href="http://www.jd.com/bigimage.aspx?id=1221882" target="_blank">查看大图</a></div>
+				<div id="view-bigimg" class="fl"><b></b><a href="#">查看大图</a></div>
 
 	<div class="share-ft"><b></b></div>
 </div>
@@ -191,37 +192,27 @@
 	<li clstag="shangpin|keycount|product|packlisttab" data-widget="tab-item"><a href="javascript:;" >包装清单</a></li>
 	<li clstag="shangpin|keycount|product|pingjiatab" data-widget="tab-item"><a href="javascript:;" >商品评价</a></li>
 	<li clstag="shangpin|keycount|product|psaleservice" data-widget="tab-item"><a href="javascript:;" >售后保障</a></li>
-	<li clstag="shangpin|keycount|product|zhinan" data-widget='tab-item'><a href='javascript:;'>京博士</a></li>
 </ul>
 			</div>
 			<div class="mc" data-widget="tab-content" id="product-detail-1">
-				<ul class="detail-list">
-					<li title="长虹LED42538ES">商品名称：长虹LED42538ES</li>
-					<li>商品编号：1221882</li>
-					<li>品牌：<a href="http://www.jd.com/pinpai/798-20710.html" target="_blank">长虹（CHANGHONG）</a></li>
-					<li>上架时间：2014-09-24 15:45:26</li>
-					<li>商品毛重：13.5kg</li>
-					<li>商品产地：中国大陆</li>
-										<li>分辨率：全高清（1920*1080）</li><li>居室场景：卧室电视 ，客厅电视</li><li>品类：LED电视（主流）</li><li>3D：不支持</li><li>功能：普通电视</li><li>尺寸：40-43英寸</li>
-				</ul>
 				<div class="detail-correction">
 					<b></b>如果您发现商品信息不准确，欢迎纠错
 				</div>
 				<div id="item-desc" class="detail-content">
-						<%-- ${itemDesc.itemDesc } --%>
+						${itemDesc.itemDesc }
 				</div>
 			</div>
 			<div class="mc hide" data-widget="tab-content" id="product-detail-2">
-				<%-- ${itemParam} --%>
+				${itemParam}
 			</div>
 				<div class="mc  hide" data-widget="tab-content" id="product-detail-3"><div class="item-detail">液晶电视×1、底座×1、遥控器×1、使用说明书×1、电源线×1</div></div><div class="mc  hide" data-widget="tab-content" id="product-detail-4"></div><div class="mc hide " data-widget="tab-content" id="product-detail-5"><div class="item-detail">本产品全国联保，享受三包服务，质保期为：一年质保<br />本产品提供上门安装调试、提供上门检测和维修等售后服务，自收到商品之日起，如您所购买家电商品出现质量问题，请先联系厂家进行检测 ，凭厂商提供的故障检测证明，在“我的商城-客户服务-返修退换货”页面提交退换申请，将有专业售后人员提供服务。商城承诺您：30天内可为您退货或换货，180天内无需修理直接换货，超过180天按国家三包规定享受服务。<br />您可以查询本品牌在各地售后服务中心的联系方式，<a  class="link_1" href="http://www.changhong.com">请点击这儿查询......</a><br />
-						<br/>售后服务电话：400-811-1666<br/>品牌官方网站：<a href="http://www.changhong.com" target="_blank">http://www.changhong.com</a>
+						<br/>售后服务电话：400-811-1666<br/>品牌官方网站：<a href="#" target="_blank">http://www.changhong.com</a>
 
 						</div></div><div id="product-detail-6" class="mc hide" data-widget="tab-content"></div>
 			<!--知识库二级标签、标题-->
             <div id="promises">
 	<strong>服务承诺：</strong><br />
-	商城向您保证所售商品均为正品行货，商城自营商品开具机打发票或电子发票。凭质保证书及商城发票，可享受全国联保服务（奢侈品、钟表除外；奢侈品、钟表由商城联系保修，享受法定三包售后服务），与您亲临商场选购的商品享受相同的质量保证。商城还为您提供具有竞争力的商品价格和<a href="http://www.jd.com/help/kdexpress.aspx" target="_blank">运费政策</a>，请您放心购买！
+	商城向您保证所售商品均为正品行货，商城自营商品开具机打发票或电子发票。凭质保证书及商城发票，可享受全国联保服务（奢侈品、钟表除外；奢侈品、钟表由商城联系保修，享受法定三包售后服务），与您亲临商场选购的商品享受相同的质量保证。商城还为您提供具有竞争力的商品价格和<a href="#" target="_blank">运费政策</a>，请您放心购买！
 	<br /><br />
 	注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！ 
 </div>
@@ -231,10 +222,6 @@
 </div>
 		</div><!--product-detail end-->
 	</div><!--right end-->
-	
-	<div class="left">
-		<div id="miaozhen7886" class="m"><a href="http://c.nfa.jd.com/adclick?sid=2&amp;cid=163&amp;aid=817&amp;bid=7853&amp;unit=69570&amp;advid=156740&amp;guv=&amp;url=http://sale.jd.com/act/IFkpQYSVnG1Jet.html" target="_blank"><img data-img="2" width="211" height="261" src="http://image.taotao.com/images/2014/10/23/2014102305423212301343.jpg" class="loading-style2"></a></div>
-	</div><!--left end-->
 	<span class="clr"></span>
 </div>
 <!-- footer start -->

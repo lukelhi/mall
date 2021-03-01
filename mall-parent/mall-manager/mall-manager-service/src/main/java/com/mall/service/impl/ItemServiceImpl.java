@@ -7,6 +7,7 @@ import com.mall.mapper.ItemMapper;
 import com.mall.mapper.ItemParamItemMapper;
 import com.mall.pojo.*;
 import com.mall.service.ItemService;
+import com.mall.utils.HttpClientUtil;
 import com.mall.utils.IDUtils;
 import com.mall.utils.JsonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -72,7 +73,6 @@ public class ItemServiceImpl implements ItemService {
 		//System.out.println("service:"+item.getCid());
 		//System.out.println("service:"+item.getId());
 
-
 		//插入商品表
 		itemMapper.insert(item);//调用dao进行操作
 		//商品描述
@@ -93,6 +93,9 @@ public class ItemServiceImpl implements ItemService {
 
 		//插入数据
 		itemParamItemMapper.insert(itemParamItem);
+
+		//生成静态页面
+		HttpClientUtil.doGet("http://localhost:8082/gen/item/"+itemId+".html");
 
 		return MallResult.ok();
 	}

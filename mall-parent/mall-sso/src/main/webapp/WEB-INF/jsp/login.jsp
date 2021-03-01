@@ -9,13 +9,6 @@
     <script type="text/javascript" src="/js/jquery-1.6.4.js"></script>
 </head>
 <body>
-<div class="w">
-    <div id="logo">
-    	<a href="http://localhost:8082" clstag="passport|keycount|login|01">
-    		<img src="/images/taotao-logo.gif" alt="淘淘" width="170" height="60"/>
-    	</a><b></b>
-   	</div>
-</div>
 <form id="formlogin" method="post" onsubmit="return false;">
     <div class=" w1" id="entry">
         <div class="mc " id="bgDiv">

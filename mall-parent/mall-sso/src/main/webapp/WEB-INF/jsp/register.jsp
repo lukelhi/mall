@@ -12,14 +12,6 @@
     <script type="text/javascript" src="/js/jquery-1.6.4.js"></script>
 </head>
 <body>
-<div class="w" id="logo">
-    <div>
-    	<a href="http://localhost:8082">
-    		<img src="/images/taotao-logo.gif" alt="淘淘商城" width="170" height="60"/>
-    	</a> <b></b>
-    </div>
-</div>
-
 <div class="w" id="regist">
     <div class="mt">
         <ul class="tab">
@@ -91,14 +83,6 @@
 					</div>
                 <div class="item item-new">
                     <span class="label">&nbsp;</span>
-
-                    <div class="fl item-ifo">
-                        <input type="checkbox" class="checkbox" checked="checked" id="readme"
-                               onclick="agreeonProtocol();">
-                        <label for="protocol">我已阅读并同意<a href="#" class="blue" id="protocol">《淘淘用户注册协议》</a></label>
-                        <span class="clr"></span>
-                        <label id="protocol_error" class="error hide">请接受服务条款</label>
-                    </div>
                 </div>
                 <div class="item">
                     <span class="label">&nbsp;</span>
