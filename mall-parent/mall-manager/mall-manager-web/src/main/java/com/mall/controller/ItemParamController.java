@@ -1,11 +1,13 @@
 package com.mall.controller;
 
+import com.mall.pojo.EasyUIDataGridResult;
 import com.mall.pojo.MallResult;
 import com.mall.service.ItemParamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
@@ -40,5 +42,26 @@ public class ItemParamController {//新增规格参数例子
 	//System.out.println("json数据是："+paramData);
 	return result;
 	}
-	
+	/**
+	 * 商品参数展示
+	 */
+	@RequestMapping("/list")
+	@ResponseBody
+	public EasyUIDataGridResult getItemParam(@RequestParam(defaultValue="1") Integer page,
+								   @RequestParam(defaultValue="30") Integer pageSize) {
+		EasyUIDataGridResult result = itemParamService.getItemParamList(page,pageSize);
+		//System.out.println("json数据是："+ result.getTotal());
+		return result;
+	}
+	/**
+	 * 根据商品id获取规格参数
+	 * 做回显使用
+	 *
+	 */
+	@RequestMapping("/item/query/{id}")
+	@ResponseBody
+	public MallResult getItemParamsById(@PathVariable Long id){
+		MallResult result = itemParamService.getItemByCid(id);
+		return result;
+	}
 }

@@ -45,10 +45,10 @@ function renderAccordion(t) {
     })
 }
 function setArea() {
-    var t, e = $("#shortcut-2013"), i = readCookie("areaId") || 1, a = {list: [{text: "\u5317\u4eac",val: 1}, {text: "\u4e0a\u6d77",val: 2}, {text: "\u5929\u6d25",val: 3}, {text: "\u91cd\u5e86",val: 4}, {text: "\u6cb3\u5317",val: 5}, {text: "\u5c71\u897f",val: 6}, {text: "\u6cb3\u5357",val: 7}, {text: "\u8fbd\u5b81",val: 8}, {text: "\u5409\u6797",val: 9}, {text: "\u9ed1\u9f99\u6c5f",val: 10}, {text: "\u5185\u8499\u53e4",val: 11}, {text: "\u6c5f\u82cf",val: 12}, {text: "\u5c71\u4e1c",val: 13}, {text: "\u5b89\u5fbd",val: 14}, {text: "\u6d59\u6c5f",val: 15}, {text: "\u798f\u5efa",val: 16}, {text: "\u6e56\u5317",val: 17}, {text: "\u6e56\u5357",val: 18}, {text: "\u5e7f\u4e1c",val: 19}, {text: "\u5e7f\u897f",val: 20}, {text: "\u6c5f\u897f",val: 21}, {text: "\u56db\u5ddd",val: 22}, {text: "\u6d77\u5357",val: 23}, {text: "\u8d35\u5dde",val: 24}, {text: "\u4e91\u5357",val: 25}, {text: "\u897f\u85cf",val: 26}, {text: "\u9655\u897f",val: 27}, {text: "\u7518\u8083",val: 28}, {text: "\u9752\u6d77",val: 29}, {text: "\u5b81\u590f",val: 30}, {text: "\u65b0\u7586",val: 31}, {text: "\u53f0\u6e7e",val: 32}, {text: "\u9999\u6e2f",val: 42}, {text: "\u6fb3\u95e8",val: 43}, {text: "\u9493\u9c7c\u5c9b",val: 84}, {link: !0,text: "\u6d77\u5916",val: "#"}],key: {A1: {text: "\u5317\u4eac",val: 1},A2: {text: "\u4e0a\u6d77",val: 2},A3: {text: "\u5929\u6d25",val: 3},A4: {text: "\u91cd\u5e86",val: 4},A5: {text: "\u6cb3\u5317",val: 5},A6: {text: "\u5c71\u897f",val: 6},A7: {text: "\u6cb3\u5357",val: 7},A8: {text: "\u8fbd\u5b81",val: 8},A9: {text: "\u5409\u6797",val: 9},A10: {text: "\u9ed1\u9f99\u6c5f",val: 10},A11: {text: "\u5185\u8499\u53e4",val: 11},A12: {text: "\u6c5f\u82cf",val: 12},A13: {text: "\u5c71\u4e1c",val: 13},A14: {text: "\u5b89\u5fbd",val: 14},A15: {text: "\u6d59\u6c5f",val: 15},A16: {text: "\u798f\u5efa",val: 16},A17: {text: "\u6e56\u5317",val: 17},A18: {text: "\u6e56\u5357",val: 18},A19: {text: "\u5e7f\u4e1c",val: 19},A20: {text: "\u5e7f\u897f",val: 20},A21: {text: "\u6c5f\u897f",val: 21},A22: {text: "\u56db\u5ddd",val: 22},A23: {text: "\u6d77\u5357",val: 23},A24: {text: "\u8d35\u5dde",val: 24},A25: {text: "\u4e91\u5357",val: 25},A26: {text: "\u897f\u85cf",val: 26},A27: {text: "\u9655\u897f",val: 27},A28: {text: "\u7518\u8083",val: 28},A29: {text: "\u9752\u6d77",val: 29},A30: {text: "\u5b81\u590f",val: 30},A31: {text: "\u65b0\u7586",val: 31},A32: {text: "\u53f0\u6e7e",val: 32},A42: {text: "\u9999\u6e2f",val: 42},A43: {text: "\u6fb3\u95e8",val: 43},A84: {text: "\u9493\u9c7c\u5c9b",val: 84}}}, n = a.key["A" + i].text, s = '<dl id="home-area">    <dt>        <b></b>        <strong>${def.text}</strong>        <a href="javascript:;">[\u66f4\u6362]</a>        <span class="blank"></span>    </dt>    <dd class="dd">        <ul class="lh">            {for item in list}                {if item.link}                    <li><a href="${item.val}" target="_blank">${item.text}</a></li>                {else}                    <li><a href="#none" data-id="${item.val}">${item.text}</a></li>                {/if}            {/for}        </ul>        <div class="close" onclick="$(\'#home-area\').removeClass(\'hover\')">\u00d7</div>   </dd></dl>';
+    var t, e = $("#shortcut-2013"), i = readCookie("areaId") || 1, a = {list: [{text: "\u5317\u4eac",val: 1}, {text: "\u4e0a\u6d77",val: 2}, {text: "\u5929\u6d25",val: 3}, {text: "\u91cd\u5e86",val: 4}, {text: "\u6cb3\u5317",val: 5}, {text: "\u5c71\u897f",val: 6}, {text: "\u6cb3\u5357",val: 7}, {text: "\u8fbd\u5b81",val: 8}, {text: "\u5409\u6797",val: 9}, {text: "\u9ed1\u9f99\u6c5f",val: 10}, {text: "\u5185\u8499\u53e4",val: 11}, {text: "\u6c5f\u82cf",val: 12}, {text: "\u5c71\u4e1c",val: 13}, {text: "\u5b89\u5fbd",val: 14}, {text: "\u6d59\u6c5f",val: 15}, {text: "\u798f\u5efa",val: 16}, {text: "\u6e56\u5317",val: 17}, {text: "\u6e56\u5357",val: 18}, {text: "\u5e7f\u4e1c",val: 19}, {text: "\u5e7f\u897f",val: 20}, {text: "\u6c5f\u897f",val: 21}, {text: "\u56db\u5ddd",val: 22}, {text: "\u6d77\u5357",val: 23}, {text: "\u8d35\u5dde",val: 24}, {text: "\u4e91\u5357",val: 25}, {text: "\u897f\u85cf",val: 26}, {text: "\u9655\u897f",val: 27}, {text: "\u7518\u8083",val: 28}, {text: "\u9752\u6d77",val: 29}, {text: "\u5b81\u590f",val: 30}, {text: "\u65b0\u7586",val: 31}, {text: "\u53f0\u6e7e",val: 32}, {text: "\u9999\u6e2f",val: 42}, {text: "\u6fb3\u95e8",val: 43}, {text: "\u9493\u9c7c\u5c9b",val: 84}, {link: !0,text: "\u6d77\u5916",val: "http://en.jd.com/chinese.html"}],key: {A1: {text: "\u5317\u4eac",val: 1},A2: {text: "\u4e0a\u6d77",val: 2},A3: {text: "\u5929\u6d25",val: 3},A4: {text: "\u91cd\u5e86",val: 4},A5: {text: "\u6cb3\u5317",val: 5},A6: {text: "\u5c71\u897f",val: 6},A7: {text: "\u6cb3\u5357",val: 7},A8: {text: "\u8fbd\u5b81",val: 8},A9: {text: "\u5409\u6797",val: 9},A10: {text: "\u9ed1\u9f99\u6c5f",val: 10},A11: {text: "\u5185\u8499\u53e4",val: 11},A12: {text: "\u6c5f\u82cf",val: 12},A13: {text: "\u5c71\u4e1c",val: 13},A14: {text: "\u5b89\u5fbd",val: 14},A15: {text: "\u6d59\u6c5f",val: 15},A16: {text: "\u798f\u5efa",val: 16},A17: {text: "\u6e56\u5317",val: 17},A18: {text: "\u6e56\u5357",val: 18},A19: {text: "\u5e7f\u4e1c",val: 19},A20: {text: "\u5e7f\u897f",val: 20},A21: {text: "\u6c5f\u897f",val: 21},A22: {text: "\u56db\u5ddd",val: 22},A23: {text: "\u6d77\u5357",val: 23},A24: {text: "\u8d35\u5dde",val: 24},A25: {text: "\u4e91\u5357",val: 25},A26: {text: "\u897f\u85cf",val: 26},A27: {text: "\u9655\u897f",val: 27},A28: {text: "\u7518\u8083",val: 28},A29: {text: "\u9752\u6d77",val: 29},A30: {text: "\u5b81\u590f",val: 30},A31: {text: "\u65b0\u7586",val: 31},A32: {text: "\u53f0\u6e7e",val: 32},A42: {text: "\u9999\u6e2f",val: 42},A43: {text: "\u6fb3\u95e8",val: 43},A84: {text: "\u9493\u9c7c\u5c9b",val: 84}}}, n = a.key["A" + i].text, s = '<dl id="home-area">    <dt>        <b></b>        <strong>${def.text}</strong>        <a href="javascript:;">[\u66f4\u6362]</a>        <span class="blank"></span>    </dt>    <dd class="dd">        <ul class="lh">            {for item in list}                {if item.link}                    <li><a href="${item.val}" target="_blank">${item.text}</a></li>                {else}                    <li><a href="#none" data-id="${item.val}">${item.text}</a></li>                {/if}            {/for}        </ul>        <div class="close" onclick="$(\'#home-area\').removeClass(\'hover\')">\u00d7</div>   </dd></dl>';
     a.def = {text: n,val: i}, e.find("ul").eq(0).after(s.process(a)), t = $("#home-area"), t.Jdropdown({event: "click"}), t.find(".dd ul a[data-id]").click(function() {
         var e = $(this).attr("data-id");
-        createCookie("areaId", e, 10, "/;domain=#"), createCookie("ipLoc-djd", e + "-0-0-0", 10, "/;domain=#"), location.href = "#", t.removeClass("hover")
+        createCookie("areaId", e, 10, "/;domain=jd.com"), createCookie("ipLoc-djd", e + "-0-0-0", 10, "/;domain=jd.com"), location.href = "http://www.jd.com/", t.removeClass("hover")
     })
 }
 function setShowcase(t) {
@@ -76,7 +76,15 @@ function setClothingPlist2(t) {
     })
 }
 function setCheckEptArea() {
-
+//    var t = function(t) {
+//        if (0 !== t.type) {
+//            var e = $("#header-2013"), i = $('<div id="jd-ept-link" style="height: 60px;margin-bottom:10px;"></div>'), a = "http://en.jd.com/", n = '<div class="w" clstag="homepage|keycount|home2013|ept"><a target="_blank" href="' + a + '" style="display: block;text-align: center;border: 2px solid #F0AF00;background: #FFFBDD url(/images/blank.gif);">' + '<img style="vertical-align: top;" class="loading-style2" data-img="1" src="http://img11.360buyimg.com/da/g14/M03/1E/18/rBEhVlNUvcEIAAAAAAAgBol2wPcAAMVkwEJL5gAACAe087.png" width="874" height="56" />' + "</a></div>";
+//            i.html(n), e.after(i)
+//        }
+//    };
+//    $.ajax({url: "http://ai.jd.com/jdip/useripinfo.php",dataType: "jsonp",success: function(e) {
+//            void 0 !== e && t(e)
+//        }})
 }
 function hotSaleMod(t) {
     (function() {
@@ -112,7 +120,7 @@ function hotSaleMod(t) {
         }, a = '#hotSale .catalogue{width:auto;float:none;}            #hotSale .hotSaleList{width:990px;overflow:hidden;padding-bottom:15px;}            .root61  #hotSale .hotSaleList{width:1210px;}            #hotSale .hotSaleList ul:after{content:"";display:block;height:0;clear:both;}            .root61  #hotSale .hotSaleList ul{width:1300px;}            #hotSale .hotSaleList ul{width:1100px;}            #hotSale .hotSaleList li{float:left;width:150px;padding:12px 46px 0px 12px;}            #hotSale .hotSaleList .p-img{padding: 5px 0 10px;}            #hotSale .hotSaleList .p-price{font-size:15px;font-family:Verdana;color:#E4393C}            #hotSale .hotSaleList .p-price span{font-size:12px}            #hotSale .hotSaleList .p-name a{display: block;height:20px;overflow: hidden;}';
         e(a);
         var n = $("body").hasClass("root61") ? 12 : 10;
-        $.ajax({url: "#",data: {ad_type: 7,spread_type: 1,ad_ids: "269:" + n,template: 0,callback: "?"},scriptCharset: "utf-8",dataType: "jsonp",success: function(e) {
+        $.ajax({url: "http://x.jd.com/ShowInterface",data: {ad_type: 7,spread_type: 1,ad_ids: "269:" + n,template: 0,callback: "?"},scriptCharset: "utf-8",dataType: "jsonp",success: function(e) {
                 if (e && e["269"] && e["269"].length == n) {
                     var a = e["269"], s = '<div class="w w1" data-fid="8" id="hotSale" clstag="homepage|keycount|home2013|41a">                        <div class="m m1 catalogue" data-lazyload="1">                            <div class="mt ld">                                <div class="floor"><b class="fixpng b b1"></b><b class="fixpng b b2"></b><b class="b b3">9F</b><b class="fixpng b4"></b></div>                                <h2>\u70ed\u5356\u5546\u54c1</h2>                            </div>                         </div>                          <div class="hotSaleList">                                    <ul>', o = "", r = " </ul>                    </div>", l = [];
                     for (var d in a)
@@ -283,7 +291,7 @@ ABTest.prototype = {test: function() {
             return console.warn("Are you kidding me~ Is there a test version called " + t + "?"), !1;
         this.tested || console.warn("Please run test method first.");
         var e = this.result[t], i = e[Math.floor(Math.random() * e.length)];
-        createCookie("__jda", "122270672." + i + ".043878.1386043878.1386043878.1", 10, "/;domain="), console.log(i)
+        createCookie("__jda", "122270672." + i + ".043878.1386043878.1386043878.1", 10, "/;domain=jd.com"), console.log(i)
     },getHashProbability: function(t, e) {
         function i(t) {
             for (var e = 0, i = 0; t.length > i; i++)
@@ -326,7 +334,7 @@ var Floors = {cacheData: null,data: function(t) {
         this.el = $("#floors-list"), this.get()
     },get: function(t) {
         var e = this;
-        $.ajax({url: "#",dataType: "jsonp",success: function(i) {
+        $.ajax({url: "http://ai.jd.com/",dataType: "jsonp",success: function(i) {
                 i && i.info && (e.set(i.info), e.cacheData = i.info), t && t(i.info)
             }})
     },sort: function(t) {
@@ -372,12 +380,12 @@ var Floors = {cacheData: null,data: function(t) {
         var t = this, e = [], i = readCookie("aview"), a = readCookie("atw");
         i && i.split(".")[1] && e.push(i.split(".")[1].split("|")[0]), a && a.split(".")[1] && e.push(a.split(".")[1]), a && a.split(".")[3] && e.push(a.split(".")[3]), a && a.split("|")[2] && e.push(a.split("|")[2].split(".")[1]);
         var n = {p: this.rid,ck: "ipLocation",lid: this.pid,lim: 6,uuid: this.uuid,ec: "gbk"};
-        this.pin && (n.pin = this.pin), $.ajax({url: "#" + e.join(","),data: n,dataType: "jsonp",success: function(e) {
+        this.pin && (n.pin = this.pin), $.ajax({url: "http://diviner.jd.com/diviner?skus=" + e.join(","),data: n,dataType: "jsonp",success: function(e) {
                 t.set(e)
             }})
     },set: function(t) {
         this.skus = [];
-        var e = '<ul class="lh">    {for item in data}    {if Number(item.jp)>=0}    <li data-push="${Grecommend.skus.push(item.sku)}" class="fore1" onclick="reClick2012(\'cai2012\',\'${item.sku}#${item.jp}\',0)" data-clk="${item.clk}">        <div class="p-img ld"><a target="_blank" href="#"><img height="130" width="130" alt="${item.t}" data-img="1" src=""></a></div>        <div class="p-name"><a target="_blank" href="#" title="${item.t}">${item.t}</a></div>        <div class="p-price">\u4eac\u4e1c\u4ef7\uff1a<strong class="J-p-${item.sku}">\uffe5${item.jp}</strong></div>    </li>    {/if}    {/for}</ul>';
+        var e = '<ul class="lh">    {for item in data}    {if Number(item.jp)>=0}    <li data-push="${Grecommend.skus.push(item.sku)}" class="fore1" onclick="reClick2012(\'cai2012\',\'${item.sku}#${item.jp}\',0)" data-clk="${item.clk}">        <div class="p-img ld"><a target="_blank" href="http://my.jd.com/product/likes.html?id=${item.sku}"><img height="130" width="130" alt="${item.t}" data-img="1" src="${pageConfig.FN_GetImageDomain(item.sku)}n3/${item.img}"></a></div>        <div class="p-name"><a target="_blank" href="http://my.jd.com/product/likes.html?id=${item.sku}" title="${item.t}">${item.t}</a></div>        <div class="p-price">\u4eac\u4e1c\u4ef7\uff1a<strong class="J-p-${item.sku}">\uffe5${item.jp}</strong></div>    </li>    {/if}    {/for}</ul>';
         t.success && t.data.length > 0 && (this.el.html(e.process(t)).parent().show(), $("#c-tabs").show(), this.setTrackCode(t.impr), getPriceNum(this.skus, readCookie("ipLoc-djd"), this.el), this.onLoad(t))
     },setTrackCode: function(t) {
         var e = this.el.find("li"), i = this, a = "&m=UA-J2011-1&ref=" + encodeURIComponent(document.referrer);
@@ -399,7 +407,6 @@ var Floors = {cacheData: null,data: function(t) {
         window[e] = null
     }, i.src = t, i = null
 };
-
 (function() {
     document.referrer.match(/^http:\/\/\S*\.360buy\.com/) && !$.cookie("_fv") && $("#shortcut-2013 .fl li").append('<div class="jtip"><div class="jtip-arrow"><div class="jtip-arrow1"></div><div class="jtip-arrow2"></div></div><div class="jtip-content">\u628a\u4eac\u4e1c\u52a0\u5165\u6536\u85cf\u5939<br />\u4e00\u952e\u8f7b\u677e\u8bbf\u95eeJD.COM</div><div class="jtip-close" onclick="this.parentNode.style.display=\'none\'">\u00d7</div></div>'), $(".plist .style1 .p-img,.plist .style2 .p-img").bind("mouseover", function() {
         $(this).css("opacity", "0.7")
@@ -427,7 +434,7 @@ var Floors = {cacheData: null,data: function(t) {
         return t.match(/\./) ? e[0] + ".<span>" + e[1] + "</span>" : void 0
     }, pageConfig.FN_SetImg = function(t, e) {
         return e ? e && e.match(/vclist/) ? pageConfig.FN_GetImageDomain(t) + e : pageConfig.FN_GetImageDomain(t) + "N4/" + e : ""
-    }, pageConfig.TPL_Tabs = '<ul class="lh style3">        {for item in data}        {var x=pageConfig.FN_SetPrice(item.c)}        {var y=pageConfig.FN_SetImg(item.a,item.d)}        <li class="fore${parseInt(item_index)}">            <div class="p-img ld"><a target="_blank" href="" title="${item.b}">{if item.e}${pageConfig.FN_SetPromotion(item.e)}{/if}<img height="100" width="100" alt="${item.b}" data-img="1" src="${y}"></a></div>            <div class="p-name"><a target="_blank" href="${pageConfig.FN_GetUrl(item.f,item.a)}" title="${item.b}">${item.b}</a></div>            <div class="p-price"><span>\uffe5</span>${x}</div>        </li>        {/for}    </ul>', pageConfig.TPL_Tabs_jp = '<ul class="lh style3">        {for item in data}        <li class="fore${parseInt(item_index)}">            <div class="p-img ld"><a target="_blank" href="${pageConfig.FN_GetUrl(item.f,item.a)}" title="${item.b}">{if item.e}${pageConfig.FN_SetPromotion(item.e)}{/if}<img height="100" width="100" alt="${item.b}" data-img="1" src="${pageConfig.FN_GetImageDomain(item.a)}${item.d}"></a></div>            <div class="p-name" style="height:1.5em;"><a target="_blank" href="${pageConfig.FN_GetUrl(item.f,item.a)}" title="${item.b}">${item.b}</a></div>            <div class="p-price"><span>${item.c}</span></div>        </li>        {/for}    </ul>', pageConfig.FN_Tabs = function(t, e) {
+    }, pageConfig.TPL_Tabs = '<ul class="lh style3">        {for item in data}        {var x=pageConfig.FN_SetPrice(item.c)}        {var y=pageConfig.FN_SetImg(item.a,item.d)}        <li class="fore${parseInt(item_index)}">            <div class="p-img ld"><a target="_blank" href="${pageConfig.FN_GetUrl(item.f,item.a)}" title="${item.b}">{if item.e}${pageConfig.FN_SetPromotion(item.e)}{/if}<img height="100" width="100" alt="${item.b}" data-img="1" src="${y}"></a></div>            <div class="p-name"><a target="_blank" href="${pageConfig.FN_GetUrl(item.f,item.a)}" title="${item.b}">${item.b}</a></div>            <div class="p-price"><span>\uffe5</span>${x}</div>        </li>        {/for}    </ul>', pageConfig.TPL_Tabs_jp = '<ul class="lh style3">        {for item in data}        <li class="fore${parseInt(item_index)}">            <div class="p-img ld"><a target="_blank" href="${pageConfig.FN_GetUrl(item.f,item.a)}" title="${item.b}">{if item.e}${pageConfig.FN_SetPromotion(item.e)}{/if}<img height="100" width="100" alt="${item.b}" data-img="1" src="${pageConfig.FN_GetImageDomain(item.a)}${item.d}"></a></div>            <div class="p-name" style="height:1.5em;"><a target="_blank" href="${pageConfig.FN_GetUrl(item.f,item.a)}" title="${item.b}">${item.b}</a></div>            <div class="p-price"><span>${item.c}</span></div>        </li>        {/for}    </ul>', pageConfig.FN_Tabs = function(t, e) {
         var i = t.split(",");
         obj = {}, html = "";
         var a;
@@ -489,7 +496,7 @@ var Floors = {cacheData: null,data: function(t) {
             var a = "\u8bf7\u8f93\u5165\u60a8\u7684\u90ae\u7bb1" == t ? "\u8bf7\u8f93\u5165\u60a8\u7684\u90ae\u7bb1" : "\u90ae\u7bb1\u683c\u5f0f\u4e0d\u6b63\u786e";
             return e.html(a).attr("class", "incorrect").show(), void 0
         }
-        $.ajax({url: "#",data: {email: t,type: 1},dataType: "jsonp",success: function(t) {
+        $.ajax({url: "http://edm.jd.com/front/ajax/subscribe.ashx",data: {email: t,type: 1},dataType: "jsonp",success: function(t) {
                 if (t) {
                     switch (t.state) {
                         case 0:
@@ -530,7 +537,7 @@ var Floors = {cacheData: null,data: function(t) {
         return e + i > a && a > i
     }
     var a = function(t) {
-        $.getJSON("#", function(e) {
+        $.getJSON("http://passport.jd.com/loginservice.aspx?method=Login&callback=?", function(e) {
             t && t(e)
         })
     };
@@ -566,7 +573,7 @@ var Floors = {cacheData: null,data: function(t) {
             clearTimeout(o), e()
         }), a.bind("click", e)
     }(document), function() {
-        var t = $("#shortcut-2013 .fl").eq(0).find(".fore1"), e = '';
+        var t = $("#shortcut-2013 .fl").eq(0).find(".fore1"), e = '            <li class="fore2 jd-wx-qrcode">                <a href="#none"><i class="i-qrcode"></i></a>                <div class="qrcode-show">                    <span class="arrow">                        <i class="layer1"></i><i class="layer2"></i>                    </span>                </div>            </li>';
         t.after(e), $(".jd-wx-qrcode").Jdropdown({delay: 100}, function() {
         })
     }()

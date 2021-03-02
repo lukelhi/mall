@@ -37,7 +37,7 @@ public class ItemController {
 		return desc;
 	}
 	
-	/*
+	/**
 	 * 获取商品参数信息
 	 *
 	 */

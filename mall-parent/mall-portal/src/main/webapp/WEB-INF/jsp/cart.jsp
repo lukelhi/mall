@@ -13,7 +13,7 @@
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
    <link rel="stylesheet" href="/css/base.css">
    <link href="/css/purchase.2012.css?v=201410141639" rel="stylesheet" type="text/css">
-   <title>我的购物车 - mall商城</title>
+   <title>我的购物车 - 商城商城</title>
    <script>
    	var pageConfig  = {};
    </script>
@@ -22,6 +22,7 @@
 <jsp:include page="commons/shortcut.jsp" />
 <!--shortcut end-->
 <div class="w w1 header clearfix">
+	<div id="logo"><a href="/"><img clstag="clickcart|keycount|xincart|logo" src="/images/taotao-logo.gif" title="返回商城商城首页" alt="返回商城商城首页"></a></div>
     <div class="language"><a href="javascript:void(0);" onclick="toEnCart()"></a></div>
 	<div class="progress clearfix">
 		<ul class="progress-1">
@@ -126,6 +127,7 @@
                           <a href="" class="combine-btn">不支持合并付款</a>
                       </span>
                       <span class="fore2 hide" style="display: inline;">
+                          <a href="javascript:goToOverseaOrder();" class="checkout-jdInt">去商城国际结算<b></b></a>
                           <a href="javascript:goToOrder();" class="checkout-jd">去商城结算<b></b></a>
                       </span>
                   </span>

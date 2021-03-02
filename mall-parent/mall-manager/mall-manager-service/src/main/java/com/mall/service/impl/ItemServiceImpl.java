@@ -7,7 +7,6 @@ import com.mall.mapper.ItemMapper;
 import com.mall.mapper.ItemParamItemMapper;
 import com.mall.pojo.*;
 import com.mall.service.ItemService;
-import com.mall.utils.HttpClientUtil;
 import com.mall.utils.IDUtils;
 import com.mall.utils.JsonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,6 +57,7 @@ public class ItemServiceImpl implements ItemService {
 
 	@Override
 	public MallResult createItem(Item item, String desc, String itemParam) {
+		//根据商品，商品描述，商品参数数据创建商品
 
 		//生成商品id
 		long itemId = IDUtils.genItemId();
@@ -75,6 +75,7 @@ public class ItemServiceImpl implements ItemService {
 
 		//插入商品表
 		itemMapper.insert(item);//调用dao进行操作
+
 		//商品描述
 		ItemDesc itemDesc = new ItemDesc();
 		itemDesc.setItemDesc(desc);
@@ -84,7 +85,7 @@ public class ItemServiceImpl implements ItemService {
 		//插入商品描述数据
 	    itemDescMapper.insert(itemDesc);
 
-	    //添加商品规格参数
+	    //添加 商品参数数据
 	    ItemParamItem itemParamItem = new ItemParamItem();
 		itemParamItem.setItemId(itemId);
 		itemParamItem.setParamData(itemParam);
@@ -95,7 +96,7 @@ public class ItemServiceImpl implements ItemService {
 		itemParamItemMapper.insert(itemParamItem);
 
 		//生成静态页面
-		HttpClientUtil.doGet("http://localhost:8082/gen/item/"+itemId+".html");
+		//HttpClientUtil.doGet("http://localhost:8082/gen/item/"+itemId+".html");
 
 		return MallResult.ok();
 	}
@@ -143,6 +144,22 @@ public class ItemServiceImpl implements ItemService {
 				sb.append("</table>");
 
 				return sb.toString();
+	}
+
+
+	@Override
+	public MallResult getItemDescById(Long id) {
+		ItemDescExample example = new ItemDescExample();
+		ItemDescExample.Criteria criteria = example.createCriteria();
+		criteria.andItemIdEqualTo(id);
+		List<ItemDesc> list = itemDescMapper.selectByExampleWithBLOBs(example);
+
+		//判断是否查询到结果
+		if(list != null && list.size() > 0) {
+			ItemDesc itemDesc = list.get(0);
+			return MallResult.ok(itemDesc);
+		}
+		return MallResult.ok();
 	}
 
 }

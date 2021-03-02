@@ -16,7 +16,10 @@ public class ItemController {
 
 	@Autowired
 	private ItemService itemService;
-	
+
+	/**
+	 * 根据商品id获取item
+	 */
 	@RequestMapping("/item/{itemId}")
 	@ResponseBody
 	public Item getItemById(@PathVariable Long itemId) {
@@ -34,7 +37,6 @@ public class ItemController {
 		EasyUIDataGridResult result = itemService.getItemList(page, rows);
 		//返回结果
 		return result;
-
 	}
 	/**
 	 * 创建商品
@@ -47,12 +49,29 @@ public class ItemController {
 		return result;
 	}
 
+	/**
+	 * 根据商品id获取商品参数
+	 * @param itemId
+	 * @param model
+	 * @return
+	 */
 	@RequestMapping("/page/item/{itemId}")
 	public String showItemParam(@PathVariable long itemId, Model model) {
 		String html = itemService.getItemParamHtml(itemId);
 		model.addAttribute("myhtml",html);
 		//System.out.println(html);
 		return "itemparam";
+	}
+	/**
+	 *
+	 *	根据商品id获取商品详情
+	 *
+	 */
+	@RequestMapping("/item/desc/{id}")
+	@ResponseBody
+	public MallResult getItemDesc(@PathVariable Long id){
+		MallResult result = itemService.getItemDescById(id);
+		return result;
 	}
 	
 }

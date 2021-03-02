@@ -35,11 +35,7 @@
 <!-- header start -->
 <#include "commons/header.ftl" />
 <!-- header end -->
-<div class="w">
-	<div class="breadcrumb">
-		<strong><a href="http://channel.jd.com/electronic.html">家用电器</a></strong><span>&nbsp;&gt;&nbsp;<a href="http://channel.jd.com/737-794.html" >大 家 电</a>&nbsp;&gt;&nbsp;<a href="http://list.jd.com/737-794-798.html" >平板电视</a>&nbsp;&gt;&nbsp;</span><script type="text/javascript">pageConfig.product.cat=[737,794,798];</script><span><a href="http://www.jd.com/pinpai/798-20710.html" >长虹（CHANGHONG）</a>&nbsp;&gt;&nbsp;<a href="http://item.jd.com/1221882.html" >长虹LED42538ES</a></span>
-	</div>
-</div><!--breadcrumb end-->
+
 <div class="w">
 	<div id="product-intro" >
 		<div id="name">
@@ -51,7 +47,7 @@
 <script type="text/javascript">pageConfig.product.marketPrice='';</script>
 <ul id="summary">
 	<li id="summary-price">
-		<div class="dt">淘&nbsp;淘&nbsp;价：</div>
+		<div class="dt">&nbsp;商&nbsp;城&nbsp;价：</div>
 		<div class="dd">
 			<strong class="p-price"  id="jd-price">￥${item.price / 100 }</strong>
 			<a id="notice-downp" href="#none" target="_blank" clstag="shangpin|keycount|product|jiangjia">(降价通知)</a>
@@ -197,6 +193,7 @@
 	<li clstag="shangpin|keycount|product|packlisttab" data-widget="tab-item"><a href="javascript:;" >包装清单</a></li>
 	<li clstag="shangpin|keycount|product|pingjiatab" data-widget="tab-item"><a href="javascript:;" >商品评价</a></li>
 	<li clstag="shangpin|keycount|product|psaleservice" data-widget="tab-item"><a href="javascript:;" >售后保障</a></li>
+	<li clstag="shangpin|keycount|product|zhinan" data-widget='tab-item'><a href='javascript:;'>京博士</a></li>
 </ul>
 			</div>
 			<div class="mc" data-widget="tab-content" id="product-detail-1">
@@ -208,11 +205,12 @@
 				</div>
 			</div>
 			<div class="mc hide" data-widget="tab-content" id="product-detail-2">
-					${itemParam}
+				${itemParam}
 			</div>
-				<div class="mc  hide" data-widget="tab-content" id="product-detail-3"><div class="item-detail">液晶电视×1、底座×1、遥控器×1、使用说明书×1、电源线×1</div></div>
-				<div class="mc  hide" data-widget="tab-content" id="product-detail-4"></div>
-				</div><div id="product-detail-6" class="mc hide" data-widget="tab-content"></div>
+				<div class="mc  hide" data-widget="tab-content" id="product-detail-3"><div class="item-detail">液晶电视×1、底座×1、遥控器×1、使用说明书×1、电源线×1</div></div><div class="mc  hide" data-widget="tab-content" id="product-detail-4"></div><div class="mc hide " data-widget="tab-content" id="product-detail-5"><div class="item-detail">本产品全国联保，享受三包服务，质保期为：一年质保<br />本产品提供上门安装调试、提供上门检测和维修等售后服务，自收到商品之日起，如您所购买家电商品出现质量问题，请先联系厂家进行检测 ，凭厂商提供的故障检测证明，在“我的商城-客户服务-返修退换货”页面提交退换申请，将有专业售后人员提供服务。商城承诺您：30天内可为您退货或换货，180天内无需修理直接换货，超过180天按国家三包规定享受服务。<br />您可以查询本品牌在各地售后服务中心的联系方式，<a  class="link_1" href="http://www.changhong.com">请点击这儿查询......</a><br />
+						<br/>售后服务电话：400-811-1666<br/>品牌官方网站：<a href="http://www.changhong.com" target="_blank">http://www.changhong.com</a>
+
+						</div></div><div id="product-detail-6" class="mc hide" data-widget="tab-content"></div>
 			<!--知识库二级标签、标题-->
             <div id="promises">
 	<strong>服务承诺：</strong><br />
@@ -227,10 +225,7 @@
 		</div><!--product-detail end-->
 	</div><!--right end-->
 	
-	<div class="left">
-		<div id="miaozhen7886" class="m"><a href="http://c.nfa.jd.com/adclick?sid=2&amp;cid=163&amp;aid=817&amp;bid=7853&amp;unit=69570&amp;advid=156740&amp;guv=&amp;url=" target="_blank"><img data-img="2" width="211" height="261" src="http://image.taotao.com/images/2014/10/23/2014102305423212301343.jpg" class="loading-style2"></a></div>
-		<div id="miaozhen7886" class="m"><a href="http://c.nfa.jd.com/adclick?sid=2&amp;cid=163&amp;aid=817&amp;bid=7853&amp;unit=69570&amp;advid=156740&amp;guv=&amp;url=" target="_blank"><img data-img="2" width="211" height="261" src="http://image.taotao.com/images/2014/10/23/2014102305423212301343.jpg" class="loading-style2"></a></div>
-	</div><!--left end-->
+	<div class="left"></div><!--left end-->
 	<span class="clr"></span>
 </div>
 <!-- footer start -->
@@ -239,5 +234,48 @@
 <script type="text/javascript" src="/js/jquery-1.6.4.js"></script>
 <script type="text/javascript" src="/js/lib-v1.js"></script>
 <script type="text/javascript" src="/js/product.js"></script>
+<script type="text/javascript" src="/js/iplocation_server.js"></script>
+<script type="text/javascript">
+	var itemControl = {
+		param:{
+			descUrl:"/item/desc/",
+			paramUrl:"/item/param/"
+		},
+		//请求商品描述
+		getItemDesc:function(itemId) {
+			$.get(itemControl.param.descUrl+itemId+".html", function(data){
+				//返回商品描述的html，直接显示到页面
+				$("#item-desc").append(data);
+			});
+		},
+		//参数请求flag
+		haveParam:false,
+		//请求规格参数
+		getItemParam:function(itemId) {
+			//如果没有查询过规格参数，就做请求
+			if (!itemControl.haveParam) {
+				$.get(itemControl.param.paramUrl+itemId+".html", function(data){
+					//返回商品规格的html，直接显示到页面
+					$("#product-detail-2").append(data);
+					//更改flag状态
+					itemControl.haveParam = true;
+				});
+			}
+		}
+	};
+	$(function(){
+		//取商品id
+		var itemId = "${item.id}";
+		//给商品规格参数tab页绑定事件
+		$("#p-con-attr").bind("click", function(){
+
+			itemControl.getItemParam(itemId);
+		});
+		//延迟一秒加载商品描述信息
+		setTimeout(function(){
+			itemControl.getItemDesc(itemId);
+		},1000);
+	});
+</script>
 </body>
 </html>

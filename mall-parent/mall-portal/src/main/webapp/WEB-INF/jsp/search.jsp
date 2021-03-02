@@ -7,9 +7,9 @@
 <head>
 <meta http-equiv="Cache-Control" content="max-age=300" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>${query} 商品搜索 </title>
+<title>${query} - 商品搜索 - 商城</title>
 <meta name="Keywords" content="java,商城java" />
-<meta name="description" content="" />
+<meta name="description" content="在商城中找到了29910件java的类似商品，其中包含了“图书”，“电子书”，“教育音像”，“骑行运动”等类型的java的商品。" />
 <link rel="stylesheet" type="text/css" href="/css/base.css" media="all" />
 <link rel="stylesheet" type="text/css" href="/css/psearch20131008.css" media="all" />
 <link rel="stylesheet" type="text/css" href="/css/psearch.onebox.css" media="all" />
@@ -44,9 +44,6 @@
 </div>
 <div class="m psearch " id="plist">
 <ul class="list-h clearfix" tpl="2">
-
-
-	<%--遍历搜索到的商品--%>
 <c:forEach items="${itemList}" var="item">
 <li class="item-book" bookid="11078102">
 	<div class="p-img">
@@ -69,22 +66,17 @@
 	</div>
 </li>
 </c:forEach>
-
 </ul></div>
 </div>
-
 <!-- footer start -->
 <jsp:include page="commons/footer.jsp" />
 <!-- footer end -->
-
 <script type="text/javascript" src="/js/jquery.hashchange.js"></script>
 <script type="text/javascript" src="/js/search_main.js"></script>
-
 <script type="text/javascript">
-${paginator.totalPages}
+//${paginator.totalPages}
 SEARCH.query = "${query}";
 SEARCH.bottom_page_html(${page},${totalPages},'');
 </script>
-
 </body>
 </html>

@@ -58,7 +58,8 @@
         			var data = $("#itemList").datagrid("getSelections")[0];
         			data.priceView = TAOTAO.formatPrice(data.price);
         			$("#itemeEditForm").form("load",data);
-        			
+        			/*调用easyui的form组件的load函数，渲染item-edit.jsp中id="itemeEditForm"的表单*/
+
         			// 加载商品描述
         			$.getJSON('/rest/item/query/item/desc/'+data.id,function(_data){
         				if(_data.status == 200){

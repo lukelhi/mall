@@ -24,6 +24,10 @@
 <jsp:include page="commons/shortcut.jsp" />
 <!--shortcut end-->
 
+<div class="w w1 header clearfix">
+    <div id="logo"><a href="/"><img src="/images/taotao-logo.gif" alt="商城商城"></a></div>
+</div>
+
 <!-- orderForm提交表单 -->
 <form id="orderForm" class="hide" action="/order/create.html" method="post">
 		<input type="hidden" name="paymentType" value="1"/>
@@ -40,8 +44,8 @@
 		<!-- 表单的收货人信息 -->
 		<input type="hidden" name="payment" value="<fmt:formatNumber groupingUsed="false" maxFractionDigits="2" minFractionDigits="2" value="${totalPrice/100 }"/>"/>
 		<input type="hidden" name="postFee" value="0"/>
-		<input type="hidden" name="orderShipping.receiverName" value="李红义"/>
-		<input type="hidden" name="orderShipping.receiverMobile" value="18737236321"/>
+		<input type="hidden" name="orderShipping.receiverName" value="小王"/>
+		<input type="hidden" name="orderShipping.receiverMobile" value="15834388888"/>
 		<input type="hidden" name="orderShipping.receiverState" value="河南"/>
 		<input type="hidden" name="orderShipping.receiverCity" value="郑州"/>
 		<input type="hidden" name="orderShipping.receiverDistrict" value="二七区"/>
@@ -62,7 +66,7 @@
 <div class="step-tit">
 	<h3>收货人信息</h3>
 	<div class="extra-r">
-		<a href="#none" class="ftx-05" onclick="">新增收货地址</a>
+		<a href="#none" class="ftx-05" onclick="use_NewConsignee()">新增收货地址</a>
 	</div>
 </div>
 <div class="step-cont">
@@ -80,13 +84,13 @@
 						<b></b>
 						<div class="user-name">
 							<div class="fl">
-								<strong limit="4">李红义</strong>&nbsp;&nbsp;收
+								<strong limit="4">入云龙</strong>&nbsp;&nbsp;收
 							</div>
-							<div class="fr">187****6321</div>
+							<div class="fr">158****8888</div>
 							<div class="clr"></div>
 						</div>
-						<div class="mt10" limit="15">河南省 安阳市 文峰区</div>
-						<div class="adr-m" limit="30">文明大道 xxxxxxxxx</div>
+						<div class="mt10" limit="15">北京 昌平区 五环外六环里</div>
+						<div class="adr-m" limit="30">西三旗 xxxxxxxxx</div>
 						<div class="op-btns ar">
 							<a href="#none"
 								class="ftx-05 mr10 setdefault-consignee hide"
@@ -119,11 +123,25 @@
 				<input type="hidden" id="instalmentPlan" value="false">
 				<li style="cursor: pointer;" onclick="save_Pay(1);">
 					<div class="payment-item item-selected online-payment "
-						for="pay-method-1" payname="支付宝" payid="1">
-						<b></b> 支付宝<span class="qmark-icon qmark-tip"></span>
+						for="pay-method-1" payname="货到付款" payid="1">
+						<b></b> 货到付款<span class="qmark-icon qmark-tip"
+							data-tips="送货上门后再收款，支持现金、POS机刷卡、支票支付 <a href='http://help.jd.com/help/distribution-768-2-2813-2863-0-1410707152669.html' target='_blank' class='ftx-05'>查看服务及配送范围</a>"></span>
 					</div>
 				</li>
-				<%--<li style="cursor: pointer;" onclick="save_Pay(5); ">
+				<li style="cursor: pointer;" onclick="save_Pay(4);">
+
+					<div class="payment-item  online-payment "
+						for="pay-method-4" payname="在线支付" payid="4">
+						<b></b> 在线支付 <font class="whiteBarSpanClass hide"
+							color="#FF6600">[支持打白条]</font> <span
+							class="qmark-icon qmark-tip"
+							data-tips="即时到帐，支持绝大数银行借记卡及部分银行信用卡 <a href='http://www.jd.com/help/onlinepay.aspx' target='_blank' class='ftx-05'> 查看银行及限额</a>"></span>
+						<!--  span class="qmark-icon qmark-tip" data-tips="在线支付，支持绝大多数银行借记卡及部分银行信用卡 <a href='http://help.jd.com/help/question-68.html' target='_blank' class='ftx-05'>查看银行及限额</a>"></span -->
+						<!-- span class="qmark-icon qmark-tip" data-tips="即时到帐，支持绝大数银行借记卡及部分银行信用卡 <a target='_blank' href='http://www.jd.com/help/onlinepay.aspx'>查看银行及限额</a>"></span -->
+					</div>
+				</li>
+
+				<li style="cursor: pointer;" onclick="save_Pay(5); ">
 
 					<div class="payment-item online-payment "
 						for="pay-method-5" payname="公司转账" payid="5">
@@ -132,8 +150,8 @@
 						<!--  span class="qmark-icon qmark-tip" data-tips="在线支付，支持绝大多数银行借记卡及部分银行信用卡 <a href='http://help.jd.com/help/question-68.html' target='_blank' class='ftx-05'>查看银行及限额</a>"></span -->
 						<!-- span class="qmark-icon qmark-tip" data-tips="通过快钱平台转账 转帐后1-3个工作日内到帐 <a target='_blank' href='http://help.jd.com/help/question-70.html'>查看帐户信息</a>"></span -->
 					</div>
-				</li>--%>
-				<%--<li style="cursor: pointer;" onclick="save_Pay(2); ">
+				</li>
+				<li style="cursor: pointer;" onclick="save_Pay(2); ">
 
 					<div class="payment-item  online-payment "
 						for="pay-method-2" payname="邮局汇款" payid="2">
@@ -142,7 +160,7 @@
 						<!--  span class="qmark-icon qmark-tip" data-tips="在线支付，支持绝大多数银行借记卡及部分银行信用卡 <a href='http://help.jd.com/help/question-68.html' target='_blank' class='ftx-05'>查看银行及限额</a>"></span -->
 						<!-- span class="qmark-icon qmark-tip" data-tips="通过快钱平台收款  汇款后1-3个工作日到账 <a target='_blank' href='http://help.jd.com/help/question-69.html'>查看帮助</a>"></span -->
 					</div>
-				</li> --%>
+				</li> 
 				<!--div id="shipment"></div--> 
 				<script>
 					$('.online-payment').hover(function() {
@@ -162,17 +180,17 @@
 <div class="step-tit">
 	<h3>送货清单</h3>
 	<div class="extra-r">
-		<a href="/cart/cart.html" id="cartRetureUrl" class="return-edit ftx-05">返回修改购物车</a>
+		<a href="/cart/show.html" id="cartRetureUrl" class="return-edit ftx-05">返回修改购物车</a>
 	</div>
 </div>
 
 <div class="step-cont" id="skuPayAndShipment-cont">
-	<!--添加商品清单 -->
+	<!--添加商品清单  zhuqingjie -->
 <div class="shopping-lists" id="shopping-lists"> 
 <div class="shopping-list ABTest">
 	<div class="goods-list">
      <!--配送方式-->
-    <h4 class="vendor_name_h" id="0">商家：网上商城</h4>
+    <h4 class="vendor_name_h" id="0">商家：商城商城</h4>
     <div class="goods-suit goods-last">
 	 <c:forEach items="${cartList }" var="cart">
 		<div class="goods-item goods-item-extra">
@@ -216,9 +234,9 @@
 			<ul>
 				<li class="mode-tab-item " id="jd_shipment_item"
 					onclick="doSwithTab('pay')"><span
-					id="jdShip-span-tip" class="m-txt">顺丰快递<i
+					id="jdShip-span-tip" class="m-txt">商城快递<i
 						class='qmark-icon qmark-tip'
-						data-tips='由网上商城负责配送，速度很快，还接受上门刷卡付款服务'></i></span><b></b></li>
+						data-tips='由商城公司负责配送，速度很快，还接受上门刷卡付款服务'></i></span><b></b></li>
 			</ul>
 		</div>
 	</div>
@@ -241,7 +259,9 @@
 </div>
 <div class="step-content">
 	<div id="part-inv" class="invoice-cont">
-		<span class="mr10"> 普通发票（电子） &nbsp; </span>
+		<span class="mr10"> 普通发票（电子） &nbsp; </span><span class="mr10">
+			个人 &nbsp; </span><span class="mr10"> &nbsp; </span> 明细 <a href="#none"
+			class="ftx-05 invoice-edit" onclick="edit_Invoice()">修改</a>
 	</div>
 </div>
 		<div class="order-summary">
@@ -267,7 +287,7 @@
 	</div>
 </div>
 <!--/ /widget/order-summary/order-summary.tpl -->
-
+					
 <!--  /widget/checkout-floatbar/checkout-floatbar.tpl -->
 <div class="trade-foot">
   <div id="checkout-floatbar" class="group">
@@ -280,8 +300,15 @@
           		  id="order-submit"	onclick="$('#orderForm').submit()">
           	提交订单
           </button>
-			<span class="total">应付总额：<strong id="payPriceId">￥<fmt:formatNumber value="${totalPrice / 100}" maxFractionDigits="2" minFractionDigits="2" groupingUsed="true"/></strong></span>
-			<span id="checkCodeDiv"></span>
+                    <span class="total">应付总额：<strong id="payPriceId">￥<fmt:formatNumber value="${totalPrice / 100}" maxFractionDigits="2" minFractionDigits="2" groupingUsed="true"/></strong>
+          </span>
+                    <span id="checkCodeDiv"></span>
+          <div class="checkout-submit-tip" id="changeAreaAndPrice" style="display:none;">
+            由于价格可能发生变化，请核对后再提交订单
+          </div>
+          <div style="display:none" id="factoryShipCodShowDivBottom" class="dispatching">
+            部分商品货到付款方式：先由商城配送“提货单”并收款，然后厂商发货。
+          </div>
         </div>
         <span id="submit_message" style="display:none" class="submit-error" ></span>
 		  	<div class="submit-check-info" id="submit_check_info_message" style="display:none"></div>

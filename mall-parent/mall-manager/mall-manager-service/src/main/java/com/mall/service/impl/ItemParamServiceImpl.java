@@ -1,6 +1,9 @@
 package com.mall.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.mall.mapper.ItemParamMapper;
+import com.mall.pojo.EasyUIDataGridResult;
 import com.mall.pojo.ItemParam;
 import com.mall.pojo.ItemParamExample;
 import com.mall.pojo.MallResult;
@@ -18,7 +21,7 @@ public class ItemParamServiceImpl implements ItemParamService {
 	private ItemParamMapper itemParamMapper;
 	
 	@Override
-	public MallResult getItemByCid(long cid) {
+	public MallResult getItemByCid(Long cid) {
 		//根据cid查询参数模板
 		ItemParamExample example = new ItemParamExample();
 		ItemParamExample.Criteria criteria = example.createCriteria();
@@ -26,7 +29,7 @@ public class ItemParamServiceImpl implements ItemParamService {
 		criteria.andItemCatIdEqualTo(cid);
 		
 		//执行查询,使用selectByExampleWithBLOBs()，查询到规格参数param_data
-		List<ItemParam> list = itemParamMapper.selectByExampleWithBLOBs(example);//
+		List<ItemParam> list = itemParamMapper.selectByExampleWithBLOBs(example);
 		
 		//判断是否查询到结果
 		if(list != null && list.size() > 0) {
@@ -50,5 +53,22 @@ public class ItemParamServiceImpl implements ItemParamService {
 		itemParamMapper.insert(itemParam);
 		
 		return MallResult.ok();
+	}
+
+	@Override
+	public EasyUIDataGridResult getItemParamList(Integer page, Integer rows) {
+		//分页处理
+		PageHelper.startPage(page, rows);
+
+		ItemParamExample itemParamExample = new ItemParamExample();
+		List<ItemParam> itemParams = itemParamMapper.selectByExampleWithBLOBs(itemParamExample);//获取data
+		//取分页信息
+		PageInfo<ItemParam> pageInfo = new PageInfo<>();
+
+		///返回处理结果
+		EasyUIDataGridResult result = new EasyUIDataGridResult();
+		result.setTotal(pageInfo.getTotal());
+		result.setRows(itemParams);
+		return result;
 	}
 }

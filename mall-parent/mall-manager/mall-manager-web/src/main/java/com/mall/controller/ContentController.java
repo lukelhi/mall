@@ -1,13 +1,15 @@
 package com.mall.controller;
 
 import com.mall.pojo.Content;
-import com.mall.utils.HttpClientUtil;
+import com.mall.pojo.EasyUIDataGridResult;
 import com.mall.pojo.MallResult;
 import com.mall.service.ContentService;
+import com.mall.utils.HttpClientUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
@@ -30,6 +32,13 @@ public class ContentController {
 	    
 	    //调用Mall-rest发布的服务，同步缓存
 	    HttpClientUtil.doGet(REST_BASE_URL+REST_CONTENT_URL+content.getCategoryId());
+		return result;
+	}
+	@RequestMapping("/query/list")
+	@ResponseBody
+	public EasyUIDataGridResult getContentList(@RequestParam(defaultValue="1") Integer page,
+											   @RequestParam(defaultValue="30") Integer pageSize,Integer categoryId){
+		EasyUIDataGridResult result = contentService.getContentList(page,pageSize,categoryId);
 		return result;
 	}
 }
