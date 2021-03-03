@@ -1,3 +1,4 @@
+
 var TT = TAOTAO = {
 	checkLogin : function(){
 		var _ticket = $.cookie("TT_TOKEN");
@@ -11,8 +12,24 @@ var TT = TAOTAO = {
 			success : function(data){
 				if(data.status == 200){
 					var username = data.data.username;
-					var html = username + "，欢迎来到商城！<a href=\"http://localhost:8084/user/logout.html\" class=\"link-logout\">[退出]</a>";
+					var html = username + "，欢迎来到商城！<a class=\"link-logout\" id=\"logout\" >[退出]</a>";
 					$("#loginbar").html(html);
+					$("#logout").click(function () {
+						$.ajax({
+							url : "http://localhost:8084/user/logout/" + _ticket,
+							dataType : "jsonp",
+							type : "GET",
+							error: function(request) {  //失败
+								alert("登出失败！");
+							},
+							success: function(data) {  //成功
+								if (data.status == 200){
+									alert("登出成功！");
+									window.location.href="http://localhost:8082"
+								}
+							}
+						});
+					});
 				}
 			}
 		});

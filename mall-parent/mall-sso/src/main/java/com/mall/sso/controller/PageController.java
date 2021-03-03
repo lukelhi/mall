@@ -19,7 +19,7 @@ public class PageController {
     }
 
     @RequestMapping("/register")
-    public String shoRegist() {
+    public String showRegist() {
         return "register";
     }
 }

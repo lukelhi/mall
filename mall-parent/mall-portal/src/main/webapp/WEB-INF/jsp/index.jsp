@@ -134,7 +134,7 @@ pageConfig.DATA_MScroll =[
         "alt": "",
         "href": "",
         "index": 7,
-        "src": "/images/5440aa17N1b411341.jpg",/*网络图片*/
+        "src": "/images/5440aa17N1b411341.jpg",
         "ext": ""
     },
     {

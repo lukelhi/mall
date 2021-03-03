@@ -27,7 +27,7 @@ public class LoginController {
     @Autowired
     private LoginService loginService;
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @RequestMapping( value = "/login", method = RequestMethod.POST)
     @ResponseBody
     public MallResult login(String username, String password, HttpServletRequest request, HttpServletResponse response) {
         try {

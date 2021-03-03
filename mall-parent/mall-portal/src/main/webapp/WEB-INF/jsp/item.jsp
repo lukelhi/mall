@@ -97,16 +97,7 @@
 	</li>
 </ul><!--summary end-->
 		<div id="brand-bar" clstag="shangpin|keycount|product|btn-coll">
-	<dl class="slogens">
-		<dt>商城·正品保证</dt>
-		<dd class="fore1">
-			<a target="_blank" href="http://help.360buy.com/help/question-67.html"><b></b><span>货到</span><span>付款</span></a>
-		</dd>
-		<dd class="fore2"></dd>
-		<dd class="fore3"><a target="_blank" href="http://help.360buy.com/help/question-65.html"><b></b><span>满39</span><span>免运费</span></a></dd>
-		<dd class="fore4"></dd>
-		<dd class="fore5"><a target="_blank" href="http://help.360buy.com/help/question-97.html"><b></b><span>售后</span><span>上门</span></a></dd>
-	</dl>
+
 	 <div class="seller hide">
 		    <p class="seller-link"></p>
 			<p id="evaluate">

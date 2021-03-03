@@ -81,7 +81,7 @@ public class OrderServiceImpl implements OrderService {
 		orderShipping.setUpdated(date);
 		// 2、插入数据
 		orderShippingMapper.insert(orderShipping);
-		// 返回TaotaoResult包装订单号。
+		// 返回MallResult包装订单号。
 		return MallResult.ok(orderId);
 	}
 }

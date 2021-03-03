@@ -22,6 +22,7 @@ public class OrderController {
 	@RequestMapping(value="/order/create", method=RequestMethod.POST)
 	@ResponseBody
 	public MallResult createOrder(@RequestBody OrderInfo orderInfo) {
+
 		try {
 			//System.out.println("orderInfo:"+orderInfo.toString());
 			MallResult result = orderService.createOrder(orderInfo);
