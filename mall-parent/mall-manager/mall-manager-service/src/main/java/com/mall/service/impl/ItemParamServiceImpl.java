@@ -71,4 +71,13 @@ public class ItemParamServiceImpl implements ItemParamService {
 		result.setRows(itemParams);
 		return result;
 	}
+
+	@Override
+	public MallResult deleteItemParamById(String ids) {
+		String[] buff = ids.split(",");
+		for (String id : buff) {
+			itemParamMapper.deleteByPrimaryKey(Long.parseLong(id));
+		}
+		return MallResult.ok();
+	}
 }

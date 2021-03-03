@@ -5,7 +5,7 @@
 		<td>商品类目:</td>
 		<td><a href="javascript:void(0)" class="easyui-linkbutton selectItemCat">选择类目</a>
 			<%--selectItemCat在common.js中，具有选择商品类目功能--%>
-			<input type="hidden" name="cid" style="width: 280px;"></input>
+			<input type="hidden" name="cid" style="width: 280px;"/>
 		</td>
 	</tr>
 	<tr class="hide addGroupTr">
@@ -43,7 +43,7 @@
 			fun:function(node){
 			$(".addGroupTr").hide().find(".param").remove();
 				//  调用getJSON，接收json，判断选择的目录是否已经添加过规格
-			  $.getJSON("/item/param/query/itemcatid/" + node.id,function(data){
+			  $.getJSON("/item/param/query/itemCatId/" + node.id,function(data){
 				  if(data.status == 200 && data.data){
 					  $.messager.alert("提示", "该类目已经添加，请选择其他类目。", undefined, function(){
 						 $("#itemParamAddTable .selectItemCat").click();

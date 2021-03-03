@@ -53,9 +53,9 @@ public class ItemEditServiceImpl implements ItemEditService {
         String[] buff = ids.split(",");
         for (String id : buff) {
             // 删除商品信息
-            Item selectByPrimaryKey = itemMapper.selectByPrimaryKey( Long.parseLong(id) );
-            selectByPrimaryKey.setStatus( (byte)3 );
-            itemMapper.updateByPrimaryKey( selectByPrimaryKey );
+            Item item = itemMapper.selectByPrimaryKey( Long.parseLong(id) );
+            item.setStatus( (byte)3 );
+            itemMapper.updateByPrimaryKey( item );
         }
         return MallResult.ok();
     }

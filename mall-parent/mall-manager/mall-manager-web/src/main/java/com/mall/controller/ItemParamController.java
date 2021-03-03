@@ -18,11 +18,11 @@ public class ItemParamController {//新增规格参数例子
 	private ItemParamService itemParamService;
 
 	/**
-	 * 查询规格参数模板
+	 * 查询商品分类的参数模板
 	 * @param cid
 	 * @return
 	 */
-	@RequestMapping("/query/itemcatid/{cid}")
+	@RequestMapping("/query/itemCatId/{cid}")
 	@ResponseBody
 	public MallResult getItemCatByCid(@PathVariable long cid) {
 		MallResult result = itemParamService.getItemByCid(cid);
@@ -30,7 +30,7 @@ public class ItemParamController {//新增规格参数例子
 	}
 
 	/**
-	 * 插入规格参数
+	 * 插入规格参数模板
 	 * @param cid
 	 * @param paramData
 	 * @return
@@ -43,7 +43,7 @@ public class ItemParamController {//新增规格参数例子
 	return result;
 	}
 	/**
-	 * 商品参数展示
+	 * 商品参数模板展示
 	 */
 	@RequestMapping("/list")
 	@ResponseBody
@@ -62,6 +62,15 @@ public class ItemParamController {//新增规格参数例子
 	@ResponseBody
 	public MallResult getItemParamsById(@PathVariable Long id){
 		MallResult result = itemParamService.getItemByCid(id);
+		return result;
+	}
+	/**
+	 * 规格参数模板删除
+	 */
+	@RequestMapping("/delete")
+	@ResponseBody
+	public MallResult deleteItemParamById(String ids){
+		MallResult result = itemParamService.deleteItemParamById(ids);
 		return result;
 	}
 }

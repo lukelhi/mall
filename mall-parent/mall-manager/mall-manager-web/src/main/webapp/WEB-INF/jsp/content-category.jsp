@@ -43,10 +43,10 @@ $(function(){
         }
 	});
 });
-function menuHandler(item){/* 点击菜单的处理方法 */
+function menuHandler(item){ /* 点击菜单的处理方法 */
 	var tree = $("#contentCategory");
 	var node = tree.tree("getSelected");
-	if(item.name === "add"){/* 新增节点 */
+	if(item.name === "add"){    /* 新增节点 */
 		tree.tree('append', {
             parent: (node?node.target:null),
             data: [{
@@ -57,7 +57,7 @@ function menuHandler(item){/* 点击菜单的处理方法 */
         }); 
 		var _node = tree.tree('find',0);
 		tree.tree("select",_node.target).tree('beginEdit',_node.target);
-	}else if(item.name === "rename"){
+	}else if(item.name === "rename"){   /*更新结点*/
 		tree.tree('beginEdit',node.target);
 	}else if(item.name === "delete"){
 		$.messager.confirm('确认','确定删除名为 '+node.text+' 的分类吗？',function(r){

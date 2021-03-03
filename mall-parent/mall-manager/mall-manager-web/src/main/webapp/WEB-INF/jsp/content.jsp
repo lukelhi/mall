@@ -48,7 +48,7 @@ var contentListToolbar = [{
     	}
     	TT.createWindow({
 			url : "/content-add"
-		}); 
+		});
     }
 },{
     text:'编辑',
@@ -63,21 +63,35 @@ var contentListToolbar = [{
     		$.messager.alert('提示','只能选择一个内容!');
     		return ;
     	}
+    	var number = 0;//防止第二次调用
 		TT.createWindow({
 			url : "/content-edit",
 			onLoad : function(){
+
+				number = number + 1;
+				if(number == 2){
+					return;
+				}
+
 				var data = $("#contentList").datagrid("getSelections")[0];
-				$("#contentEditForm").form("load",data);
-				
-				// 实现图片
-				if(data.pic){
-					$("#contentEditForm [name=pic]").after("<a href='"+data.pic+"' target='_blank'><img src='"+data.pic+"' width='80' height='50'/></a>");	
-				}
-				if(data.pic2){
-					$("#contentEditForm [name=pic2]").after("<a href='"+data.pic2+"' target='_blank'><img src='"+data.pic2+"' width='80' height='50'/></a>");					
-				}
-				
-				contentEditEditor.html(data.content);
+				var params = {"id":data.id}
+				$.get("/content/getContent",params,function (_data) {
+					if(_data.status == 200){
+						data = _data.data;
+						$("#contentEditForm").form("load",data);
+						/*调用easyUI的form组件的load函数，渲染content-edit.jsp中id="contentEditForm"的表单*/
+
+						// 实现图片
+						if(data.pic){
+							$("#contentEditForm [name=pic]").after("<a href='"+data.pic+"' target='_blank'><img src='"+data.pic+"' width='80' height='50'/></a>");
+						}
+						if(data.pic2){
+							$("#contentEditForm [name=pic2]").after("<a href='"+data.pic2+"' target='_blank'><img src='"+data.pic2+"' width='80' height='50'/></a>");
+						}
+						contentEditEditor.html(data.content);
+					}
+				})
+
 			}
 		});    	
     }

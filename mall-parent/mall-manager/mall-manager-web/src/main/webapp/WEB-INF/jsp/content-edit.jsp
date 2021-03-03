@@ -9,11 +9,12 @@
 	    <table cellpadding="5">
 	        <tr>
 	            <td>内容标题:</td>
-	            <td><input class="easyui-textbox" type="text" name="title" data-options="required:true" style="width: 280px;"></input></td>
+	            <td><input class="easyui-textbox" type="text" name="title" data-options="required:true"
+						   style="width: 280px;"/></td>
 	        </tr>
 	        <tr>
 	            <td>内容子标题:</td>
-	            <td><input class="easyui-textbox" type="text" name="subTitle" style="width: 280px;"></input></td>
+	            <td><input class="easyui-textbox" type="text" name="subTitle" style="width: 280px;"/></td>
 	        </tr>
 	        <tr>
 	            <td>内容描述:</td>
@@ -22,7 +23,7 @@
 	        </tr>
 	         <tr>
 	            <td>URL:</td>
-	            <td><input class="easyui-textbox" type="text" name="url" style="width: 280px;"></input></td>
+	            <td><input class="easyui-textbox" type="text" name="url" style="width: 280px;"/></td>
 	        </tr>
 	        <tr>
 	            <td>图片:</td>
@@ -66,7 +67,7 @@ var contentEditPage = {
 			}
 			contentEditEditor.sync();
 			
-			$.post("/rest/content/edit",$("#contentEditForm").serialize(), function(data){
+			$.post("/content/edit",$("#contentEditForm").serialize(), function(data){
 				if(data.status == 200){
 					$.messager.alert('提示','新增内容成功!');
 					$("#contentList").datagrid("reload");

@@ -58,9 +58,9 @@ public class ItemController {
 	@RequestMapping("/page/item/{itemId}")
 	public String showItemParam(@PathVariable long itemId, Model model) {
 		String html = itemService.getItemParamHtml(itemId);
-		model.addAttribute("myhtml",html);
+		model.addAttribute("myHtml",html);
 		//System.out.println(html);
-		return "itemparam";
+		return "item-param";
 	}
 	/**
 	 *

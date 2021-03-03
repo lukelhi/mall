@@ -32,4 +32,16 @@ public class ContentCategoryController {
 	MallResult result = contentCategoryService.insertCategory(parentId, name);
 	return result;
 	}
+	@RequestMapping("/delete")
+	@ResponseBody
+	public MallResult deleteContentCategory(Long id){
+		MallResult result = contentCategoryService.deleteContentCategory(id);
+		return result;
+	}
+	@RequestMapping("/update")
+	@ResponseBody
+	public MallResult update(Long id, String name) {
+		MallResult result = contentCategoryService.updateContentCategory(id, name);
+		return result;
+	}
 }

@@ -192,7 +192,7 @@ var TT = TAOTAO = {
     },
     /*	展示规格参数的表单 */
     changeItemParam : function(node,formId){
-    	$.getJSON("/item/param/query/itemcatid/" + node.id,function(data){/*查询是否有规格参数，有规格参数即显示*/
+    	$.getJSON("/item/param/query/itemCatId/" + node.id,function(data){/*查询是否有规格参数，有规格参数即显示*/
 			  if(data.status == 200 && data.data){
 				 $("#"+formId+" .params").show();
 				 var paramData = JSON.parse(data.data.paramData);

@@ -41,4 +41,28 @@ public class ContentController {
 		EasyUIDataGridResult result = contentService.getContentList(page,pageSize,categoryId);
 		return result;
 	}
+
+	/**
+	 * 根据id获取商品内容
+	 * @param id
+	 * @return
+	 */
+	@RequestMapping("/getContent")
+	@ResponseBody
+	public MallResult getContent(String id) {
+		MallResult result = contentService.getContent(id);
+		return result;
+	}
+	@RequestMapping("/edit")
+	@ResponseBody
+	public MallResult updateContent(Content content){
+		MallResult result = contentService.updateContent(content);
+		return result;
+	}
+	@RequestMapping("/delete")
+	@ResponseBody
+	public MallResult deleteContent(String ids){
+		MallResult result = contentService.deleteContent(ids);
+		return result;
+	}
 }
