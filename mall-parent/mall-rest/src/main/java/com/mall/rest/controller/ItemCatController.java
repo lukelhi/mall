@@ -19,6 +19,7 @@ public class ItemCatController {
 	private ItemCatService itemCatService;
 
 	//controller支持jsonp的两种方式
+
 	//使用第二种方法
 
 	@RequestMapping(value="/list1",produces= MediaType.APPLICATION_JSON_VALUE+";charset=utf-8")//json形式响应，设置contextType和字符集

@@ -16,7 +16,11 @@ import java.util.List;
 public class ItemCatServiceImpl implements ItemCatService {
 	@Autowired
 	private ItemCatMapper itemCatMapper;
-	
+
+	/**
+	 *	查询商品分类列表
+	 * @return
+	 */
 	@Override
 	public ItemCatResult getItemCatList() {
 		
@@ -49,7 +53,6 @@ public class ItemCatServiceImpl implements ItemCatService {
 			if(itemCat.getIsParent()) {
 				CatNode node = new CatNode();
 				node.setUrl("/products/"+itemCat.getId()+".html");
-			
 				//如果当前节点是第一级节点
 				if(itemCat.getParentId() == 0) {
 					node.setName("<a href='/products/"+itemCat.getId()+".html'>"+itemCat.getName()+"</a>");
