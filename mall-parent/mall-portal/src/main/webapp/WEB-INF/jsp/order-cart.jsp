@@ -62,7 +62,7 @@
 <div class="step-tit">
 	<h3>收货人信息</h3>
 	<div class="extra-r">
-		<a href="#none" class="ftx-05" onclick="">新增收货地址</a>
+		<a href="#none" class="ftx-05" onclick="">收货地址</a>
 	</div>
 </div>
 <div class="step-cont">
@@ -103,7 +103,7 @@
 	</div>
 </div>
 <!--/ /widget/consignee-step/consignee-step.tpl -->
-	
+
 	
 
 <!--/ /widget/shopping-list/shopping-list.tpl -->

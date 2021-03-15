@@ -21,7 +21,9 @@
    <script type="text/javascript" src="/js/base-2011.js" charset="utf-8"></script>
    <script type="text/javascript" src="/js/jquery.cookie.js" charset="utf-8"></script>
    <script type="text/javascript" src="/js/taotao.js" charset="utf-8"></script>
-</head> <body id="mainframe">
+</head>
+
+<body id="mainframe">
 <!--shortcut start-->
 <jsp:include page="commons/shortcut.jsp" />
 <!--shortcut end-->
@@ -43,11 +45,12 @@
 		    <ul class="list-order">
 			    <li class="li-st">
 					<div class="fore1">订单号：<a href="javascript:void(0)">${orderId }</a></div>
-					<!-- 货到付款 -->
-					<div class="fore2">货到付款：<strong class="ftx-01">${payment}元</strong></div>
+
+					<div class="fore2">需付款：<strong class="ftx-01">${payment}元</strong></div>
 					<div class="fore3">
-					   	商城快递 &nbsp; 送货时间: 预计 ${date} 送达&nbsp;
+					   	顺丰快递 &nbsp; 送货时间: 预计 ${date} 送达&nbsp;
 					</div>
+					<div><a href="/order/pay.action?payment=${payment}&orderId=${orderId}" >支付宝支付</a></div>
 				</li>
 			</ul>
 		<!-- 在线支付按钮  -->

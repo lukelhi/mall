@@ -25,6 +25,7 @@ public class OrderController {
 
 		try {
 			//System.out.println("orderInfo:"+orderInfo.toString());
+
 			MallResult result = orderService.createOrder(orderInfo);
 			return result;
 		} catch (Exception e) {
@@ -32,5 +33,4 @@ public class OrderController {
 			return MallResult.build(500, ExceptionUtil.getStackTrace(e));
 		}
 	}
-	
 }
