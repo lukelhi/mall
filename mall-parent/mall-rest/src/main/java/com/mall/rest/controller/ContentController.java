@@ -18,6 +18,7 @@ public class ContentController {
 
 	/**
 	 * 根据cid查询商品内容
+	 * 轮播图展示
 	 *
 	 * @param cid
 	 * @return

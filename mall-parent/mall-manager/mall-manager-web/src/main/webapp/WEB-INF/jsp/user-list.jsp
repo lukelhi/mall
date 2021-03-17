@@ -61,15 +61,15 @@
         handler:function(){
             var ids = getSelectionsIds();
             if(ids.length == 0){
-                $.messager.alert('提示','未选中商品规格!');
+                $.messager.alert('提示','未选中用户!');
                 return ;
             }
-            $.messager.confirm('确认','确定删除ID为 '+ids+' 的商品规格吗？',function(r){
+            $.messager.confirm('确认','确定删除ID为 '+ids+' 的用户吗？',function(r){
                 if (r){
                     var params = {"ids":ids};
                     $.post("/user/delete",params, function(data){
                         if(data.status == 200){
-                            $.messager.alert('提示','删除商品规格成功!',undefined,function(){
+                            $.messager.alert('提示','删除用户成功!',undefined,function(){
                                 $("#UserList").datagrid("reload");
                             });
                         }

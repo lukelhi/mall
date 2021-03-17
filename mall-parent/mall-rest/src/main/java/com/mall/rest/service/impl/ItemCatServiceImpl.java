@@ -56,6 +56,7 @@ public class ItemCatServiceImpl implements ItemCatService {
 				//如果当前节点是第一级节点
 				if(itemCat.getParentId() == 0) {
 					node.setName("<a href='/products/"+itemCat.getId()+".html'>"+itemCat.getName()+"</a>");
+
 					index++;//index是计数器，不能超过十四个
 				}else {
 					node.setName(itemCat.getName());
